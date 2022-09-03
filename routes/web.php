@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Profilenfant;
 use App\Http\Controllers\PanelIndividuel;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\BackaccueilController;
@@ -29,3 +30,5 @@ Route::get('/frontend/accueil',[FrontaccueilController::class,"index"])->name("f
 Route::get('/frontend/calendrier',[CalendrierparentsController::class,"index"])->name("frontCalendrier");
 //frontend inventaire
 Route::get('/frontend/inventaire',[InventaireparentsController::class,"index"])->name("frontInventaire");
+//frontend profilEnfant
+Route::get('/frontend/profil',[Profilenfant::class,"index"])->name("frontProfil");

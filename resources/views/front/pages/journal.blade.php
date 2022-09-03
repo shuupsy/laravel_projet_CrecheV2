@@ -1,4 +1,4 @@
 @extends("front.layout.index")
 @section("content")
-sflkhfsklj
+section journal
 @endsection
