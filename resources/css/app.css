@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*ICON ACCUEIL NURSES*/
+.connexionBg{
+    background-image: url("../../public/assets/img/photo-1555252333-9f8e92e65df9.avif");
+    background-position: center;
+    background-size: cover;
+}
+#clock{
+    background-image: url("../../public/assets/img/clock.svg");
+    background-size: cover;
+}
+#humeur{
+    background-image: url("../../public/assets/img/baby.svg");
+    background-size: cover;
+}
+#activity{
+    background-image: url("../../public/assets/img/cubes.svg");
+    background-size: cover;
+}
+#repas{
+    background-image: url("../../public/assets/img/feeding-bottle.svg");
+    background-size: cover;
+}
+#sommeil{
+    background-image: url("../../public/assets/img/zzz.svg");
+    background-size: cover;
+}
+#change{
+    background-image: url("../../public/assets/img/diaper.svg");
+    background-size: cover;
+}
+#diarrhe{
+    background-image: url("../../public/assets/img/poo.svg");
+    background-size: cover;
+}
+#fievre{
+    background-image: url("../../public/assets/img/thermometer.svg");
+    background-size: cover;
+}
+#blessure{
+    background-image: url("../../public/assets/img/first-aid-kit.svg");
+    background-size: cover;
+}
+#sante{
+    background-image: url("../../public/assets/img/medical.svg");
+    background-size: cover;
+}
+.sizeIcon{
+    width: calc(100vw - 256px);
+}
+/*MODAL FONCTION*/
+.areaShadow{
+    box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.03);
+}
+
+.modalClock{
+    width: 300px;
+    height: 240px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.18);
+}
+.modalHumeur{
+    width: 950px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.18);
+}
+.modalActivite{
+    width: 650px;
+    height: 480px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.18);
+}
+.modalRepas{
+    width: 650px;
+    height: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.18);
+}
+.modalNuit{
+    width: 650px;
+    height: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.18);
+}
+.modalChange{
+    width: 450px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.18);
+}
+.modalBlessure{
+    width: 650px;
+    height: 480px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.18);
+}
+.modalSante{
+    width: 650px;
+    height: 480px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.18);
+}
