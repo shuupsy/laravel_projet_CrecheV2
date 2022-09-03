@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreJournalparentsRequest;
+use App\Http\Requests\UpdateJournalparentsRequest;
 use App\Models\Journalparents;
-use App\Models\Calendrierparents;
-use App\Http\Requests\StoreCalendrierparentsRequest;
-use App\Http\Requests\UpdateCalendrierparentsRequest;
 
-class CalendrierparentsController extends Controller
+class JournalparentsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,7 @@ class CalendrierparentsController extends Controller
      */
     public function index()
     {
-        $data = Journalparents::all();
-        return view("front.pages.calendrier",compact("data"));
+        //
     }
 
     /**
@@ -33,10 +31,10 @@ class CalendrierparentsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCalendrierparentsRequest  $request
+     * @param  \App\Http\Requests\StoreJournalparentsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCalendrierparentsRequest $request)
+    public function store(StoreJournalparentsRequest $request)
     {
         //
     }
@@ -44,10 +42,10 @@ class CalendrierparentsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Calendrierparents  $calendrierparents
+     * @param  \App\Models\Journalparents  $journalparents
      * @return \Illuminate\Http\Response
      */
-    public function show(Calendrierparents $calendrierparents)
+    public function show(Journalparents $journalparents)
     {
         //
     }
@@ -55,10 +53,10 @@ class CalendrierparentsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Calendrierparents  $calendrierparents
+     * @param  \App\Models\Journalparents  $journalparents
      * @return \Illuminate\Http\Response
      */
-    public function edit(Calendrierparents $calendrierparents)
+    public function edit(Journalparents $journalparents)
     {
         //
     }
@@ -66,11 +64,11 @@ class CalendrierparentsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCalendrierparentsRequest  $request
-     * @param  \App\Models\Calendrierparents  $calendrierparents
+     * @param  \App\Http\Requests\UpdateJournalparentsRequest  $request
+     * @param  \App\Models\Journalparents  $journalparents
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCalendrierparentsRequest $request, Calendrierparents $calendrierparents)
+    public function update(UpdateJournalparentsRequest $request, Journalparents $journalparents)
     {
         //
     }
@@ -78,10 +76,10 @@ class CalendrierparentsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Calendrierparents  $calendrierparents
+     * @param  \App\Models\Journalparents  $journalparents
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Calendrierparents $calendrierparents)
+    public function destroy(Journalparents $journalparents)
     {
         //
     }
