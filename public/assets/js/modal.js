@@ -116,3 +116,7 @@ function showSliderValue() {
 }
 //calendar
 
+function affichageJournalier(x)
+{
+
+}

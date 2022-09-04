@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Backaccueil;
+use App\Models\Journalparents;
 use App\Models\Calendriernurse;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreCalendriernurseRequest;
 use App\Http\Requests\UpdateCalendriernurseRequest;
 
@@ -17,7 +19,8 @@ class CalendriernurseController extends Controller
     public function index()
     {
         $enfants = Backaccueil::all();
-        return view("back.pages.calendrier",compact("enfants"));
+        $journalier = Journalparents::all();
+        return view("back.pages.calendrier",compact("enfants", "journalier"));
     }
 
     /**
