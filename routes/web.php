@@ -18,17 +18,26 @@ Route::post('/connexion',[ConnexionController::class,"store"]);
 
 //backend accueil
 Route::get('/backend/nurseAccueil',[BackaccueilController::class,"index"])->name("backAccueil");
-Route::post('/backend/{id}/panel/{nom}_{prenom}',[PanelIndividuel::class,"index"])->name("backIndividuel");
+Route::post('/backend/{id}/panel',[PanelIndividuel::class,"index"])->name("backIndividuel");
+
+//backend panel
+Route::post('backend/{id}/panel/activity',[PanelIndividuel::class,"activity"]);
+
 //backend inventaire
 Route::get('/backend/inventaire',[InventairenurseController::class,"index"])->name("backInventaire");
+Route::patch('/backend/inventaire/ajouter/{id}',[InventairenurseController::class,"ajouter"]);
+
 //backend calendrier
 Route::get('/backend/calendrier',[CalendriernurseController::class,"index"])->name("backCalendrier");
 
 //frontend accueil
 Route::get('/frontend/accueil',[FrontaccueilController::class,"index"])->name("frontAccueil");
+
 //frontend calendrier
 Route::get('/frontend/calendrier',[CalendrierparentsController::class,"index"])->name("frontCalendrier");
+
 //frontend inventaire
 Route::get('/frontend/inventaire',[InventaireparentsController::class,"index"])->name("frontInventaire");
+
 //frontend profilEnfant
 Route::get('/frontend/profil',[Profilenfant::class,"index"])->name("frontProfil");

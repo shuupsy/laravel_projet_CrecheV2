@@ -55,7 +55,7 @@
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
 
-                <span class="mx-4 font-medium">Messagerie</span>
+                <span class="mx-4 font-medium">Message</span>
             </a>
 
 

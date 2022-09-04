@@ -11,11 +11,11 @@
 
             <div class="grid grid-cols-1 gap-4 mt-8 xl:mt-10 md:grid-cols-2 xl:grid-cols-4">
                 @foreach ($data as $item)
-                    <form action="{{$item->id}}/panel/{{$item->nom}}_{{$item->prenom}}" method="POST">
+                    <form action="{{$item->id}}/panel" method="POST">
                         @csrf
                         <button>
                             <div
-                                class="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+                                class="w-80 flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
                                 <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                                     src="/assets/img/{{ $item->img }}" alt="">
 

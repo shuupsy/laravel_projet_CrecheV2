@@ -15,6 +15,7 @@ class JournalparentsSeeder extends Seeder
      */
     public function run()
     {
+
         DB::table("journalparents")->insert([
             [
                 "accident" => "none",
@@ -30,5 +31,6 @@ class JournalparentsSeeder extends Seeder
                 "humeur" => "joyeux"
             ]
         ]);
+
     }
 }

@@ -15,17 +15,9 @@ return new class extends Migration
     {
         Schema::create('journalparents', function (Blueprint $table) {
             $table->id();
-            $table->string("accident");
-            $table->string("eat");
-            $table->float("sleep");
-            $table->string("temperature");
-            $table->integer("change");
+            $table->foreignId("backaccueil_id")->constrained();
             $table->string("activity");
-            $table->string("day");
-            $table->string("arrivalTime");
-            $table->string("humeur");
-            $table->string("departTime");
-            $table->integer("poo");
+            $table->string("response");
             $table->timestamps();
         });
     }

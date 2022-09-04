@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Backaccueil;
+use App\Models\Calendriernurse;
 use App\Http\Requests\StoreCalendriernurseRequest;
 use App\Http\Requests\UpdateCalendriernurseRequest;
-use App\Models\Calendriernurse;
 
 class CalendriernurseController extends Controller
 {
@@ -15,7 +16,8 @@ class CalendriernurseController extends Controller
      */
     public function index()
     {
-        return view("back.pages.calendrier");
+        $enfants = Backaccueil::all();
+        return view("back.pages.calendrier",compact("enfants"));
     }
 
     /**

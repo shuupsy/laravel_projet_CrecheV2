@@ -11,11 +11,13 @@
                     </div>
                     <div class="mt-10">quantité restante: {{ $item->quantity }}</div>
                     <div class="flex gap-4">
-                        <form action="" method="POST">
+                        <form action="/backend/inventaire/diminuer" method="POST">
                             <button type="submit">-</button>
                         </form>
                         <span>{{ $item->quantity }}</span>
-                        <form action="" method="POST">
+                        <form action="/backend/inventaire/ajouter/{{$item->id}}" method="POST">
+                            @csrf
+                            @method("PATCH")
                             <button type="submit">+</button>
                         </form>
                     </div>
