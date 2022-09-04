@@ -33,61 +33,61 @@ let modalArray = [
     modalFievre,
     modalDiarrhe
 ]
-btnClock.addEventListener("click", ()=>{
+btnClock.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
     modalClock.classList.remove("hidden");
 })
-btnHumeur.addEventListener("click", ()=>{
+btnHumeur.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
     modalHumeur.classList.remove("hidden");
 })
-btnActivite.addEventListener("click", ()=>{
+btnActivite.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
     modalActivite.classList.remove("hidden");
 })
-btnRepas.addEventListener("click", ()=>{
+btnRepas.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
     modalRepas.classList.remove("hidden");
 })
-btnSleep.addEventListener("click", ()=>{
+btnSleep.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
     modalSleep.classList.remove("hidden");
 })
-btnChange.addEventListener("click", ()=>{
+btnChange.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
     modalChange.classList.remove("hidden");
 })
-btnBlessure.addEventListener("click", ()=>{
+btnBlessure.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
     modalBlessure.classList.remove("hidden");
 })
-btnSante.addEventListener("click", ()=>{
+btnSante.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
     modalSante.classList.remove("hidden");
 })
-btnFievre.addEventListener("click", ()=>{
+btnFievre.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
     modalFievre.classList.remove("hidden");
 })
-btnDiarrhe.addEventListener("click", ()=>{
+btnDiarrhe.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
         modalArray[index].classList.add("hidden");
     }
@@ -97,9 +97,9 @@ btnDiarrhe.addEventListener("click", ()=>{
 //heure actuelle
 let heureActuelle = document.querySelector('#heureActuelle')
 
-function hour(){
+function hour() {
     let currentTime = new Date();
-    let minutes = ('0'+ currentTime.getMinutes()).slice(-2);
+    let minutes = ('0' + currentTime.getMinutes()).slice(-2);
     let time = currentTime.getHours() + ' : ' + minutes;
     heureActuelle.innerHTML = time;
 }
@@ -112,5 +112,7 @@ let rangeBullet = document.getElementById("rs-bullet");
 rangeSlider.addEventListener("input", showSliderValue, false);
 
 function showSliderValue() {
-  rangeBullet.innerHTML = rangeSlider.value + '°C';
+    rangeBullet.innerHTML = rangeSlider.value + '°C';
 }
+//calendar
+

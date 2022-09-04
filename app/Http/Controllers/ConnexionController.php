@@ -40,7 +40,7 @@ class ConnexionController extends Controller
         $account->username = $request->username;
         $account->password = $request->password;
         $account->save();
-        if($account->username == "cocquibus.y@gmail.com"){
+        if($account->username == "nurse@gmail.com"){
             return redirect("/backend/nurseAccueil");
         }
         else{

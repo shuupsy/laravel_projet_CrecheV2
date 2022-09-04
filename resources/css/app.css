@@ -112,10 +112,13 @@
     height: 100vh;
 }
 /*Calendar*/
-.Calendar{
+.CalendarBox{
     width: calc(100vw - 300px);
     height: 98vh;
 }
-.CalendarList{
-    width: fit-content;
+
+.CalendarDay{
+    width: 14.28%;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.123);
 }

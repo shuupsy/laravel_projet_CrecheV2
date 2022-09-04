@@ -1,6 +1,6 @@
 @extends('back.layout.index')
 @section('content')
-    <!-- component -->
+      <!-- component -->
     <!-- This is an example component -->
     <div class="flex justify-center items-center h-screen sizeIcon">
 
@@ -18,8 +18,8 @@
                     <div class="w-full">
 
                         <!-- <div class="font-bold text-gray-800 text-xl mb-4">
-                                Schedule Tasks
-                   </div> -->
+                    Schedule Tasks
+       </div> -->
 
                         <div class="bg-white rounded-lg shadow overflow-hidden">
 
@@ -74,17 +74,14 @@
                                             class="px-4 pt-2 border-r border-b relative">
                                             <div @click="showEventModal(date)" x-text="date"
                                                 class="inline-flex w-6 h-6 items-center justify-center cursor-pointer text-center leading-none rounded-full transition ease-in-out duration-100"
-                                                :class="{
-                                                    'bg-blue-500 text-white': isToday(date) ==
-                                                        true,
-                                                    'text-gray-700 hover:bg-blue-200': isToday(date) == false
-                                                }">
+                                                :class="{ 'bg-blue-500 text-white': isToday(date) ==
+                                                    true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }">
                                             </div>
                                             <div style="height: 80px;" class="overflow-y-auto mt-1">
                                                 <!-- <div
-                          class="absolute top-0 right-0 mt-2 mr-2 inline-flex items-center justify-center rounded-full text-sm w-6 h-6 bg-gray-700 text-white leading-none"
-                          x-show="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"
-                          x-text="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"></div> -->
+              class="absolute top-0 right-0 mt-2 mr-2 inline-flex items-center justify-center rounded-full text-sm w-6 h-6 bg-gray-700 text-white leading-none"
+              x-show="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"
+              x-text="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"></div> -->
 
                                                 <template
                                                     x-for="event in events.filter(e => new Date(e.event_date).toDateString() ===  new Date(year, month, date).toDateString() )">
@@ -114,8 +111,6 @@
                     </div>
 
                     <!-- Modal -->
-                    <form action="">
-
                     <div style=" background-color: rgba(0, 0, 0, 0.8)"
                         class="fixed z-40 top-0 right-0 left-0 bottom-0 h-full w-full"
                         x-show.transition.opacity="openEventModal">
@@ -130,82 +125,69 @@
 
                             <div class="shadow w-full rounded-lg bg-white overflow-hidden w-full block p-8">
 
-                                <h2 class="font-bold text-2xl mb-6 text-gray-800 border-b pb-2">Ajouter un détail</h2>
+                                <h2 class="font-bold text-2xl mb-6 text-gray-800 border-b pb-2">Add Event Details</h2>
 
                                 <div class="mb-4">
-                                    <label class="text-gray-800 block mb-1 font-bold text-sm tracking-wide">Nom de
-                                        l'évenement</label>
+                                    <label class="text-gray-800 block mb-1 font-bold text-sm tracking-wide">Event
+                                        title</label>
                                     <input
                                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded-lg w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
                                         type="text" x-model="event_title">
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="text-gray-800 block mb-1 font-bold text-sm tracking-wide">Date de
-                                        l'évenement</label>
+                                    <label class="text-gray-800 block mb-1 font-bold text-sm tracking-wide">Event
+                                        date</label>
                                     <input
                                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded-lg w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
                                         type="text" x-model="event_date" readonly>
                                 </div>
 
                                 <div class="inline-block w-64 mb-4">
-                                    <label class="text-gray-800 block mb-1 font-bold text-sm tracking-wide">Liste des
-                                        enfants</label>
+                                    <label class="text-gray-800 block mb-1 font-bold text-sm tracking-wide">Select a
+                                        theme</label>
                                     <div class="relative">
+                                        <select @change="event_theme = $event.target.value;" x-model="event_theme"
+                                            class="block appearance-none w-full bg-gray-200 border-2 border-gray-200 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-blue-500 text-gray-700">
+                                            <template x-for="(theme, index) in themes">
+                                                <option :value="theme.value" x-text="theme.label"></option>
+                                            </template>
 
-                                        <div x-data="{ isOpen: true }" class="relative inline-block ">
-                                            <!-- Dropdown toggle button -->
-                                            <button id="btnCalendrierEnfant" @click="isOpen = !isOpen"
-                                                class="relative z-10 flex items-center p-2 text-sm text-gray-600 bg-white border border-transparent rounded-md focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:text-white dark:bg-gray-800 focus:outline-none">
-                                                <span class="mx-1">ENFANTS</span>
-                                                <svg class="w-5 h-5 mx-1" viewBox="0 0 24 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M12 15.713L18.01 9.70299L16.597 8.28799L12 12.888L7.40399 8.28799L5.98999 9.70199L12 15.713Z"
-                                                        fill="currentColor"></path>
-                                                </svg>
-                                            </button>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                            </svg>
                                         </div>
-
                                     </div>
                                 </div>
-                                <!--LISTE ENFANT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
-                                <div id="totalModalCalendar" class="flex flex-wrap hidden CalendarList">
-                                    @foreach ($enfants as $item)
-                                        <div class="bg-sky-400 p-3 m-2 rounded-full text-white text-center">
-                                            <p>
-                                             {{ $item->nom }} {{ $item->prenom }}
-                                            </p>
-                                        </div>
-                                    @endforeach
-
-                                </div>
                                 <div class="mt-8 text-right">
                                     <button type="button"
                                         class="bg-white hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-sm mr-2"
                                         @click="openEventModal = !openEventModal">
-                                        Fermé
+                                        Cancel
                                     </button>
                                     <button type="button"
                                         class="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-700 rounded-lg shadow-sm"
                                         @click="addEvent()">
-                                        Enregistrer
+                                        Save Event
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </form>
                     <!-- /Modal -->
                 </div>
 
                 <script>
-                    const MONTH_NAMES = ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre',
-                        'Octobre', 'Novembre', 'Decembre'
+                    const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+                        'October', 'November', 'December'
                     ];
-                    const DAYS = ['Lundi', 'Mardi', 'Mercrdi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+                    const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
                     function app() {
                         return {
@@ -323,13 +305,8 @@
                             }
                         }
                     }
-                    let totalModalCalendar = document.getElementById("totalModalCalendar")
-                    let btnCalendrierEnfantListe = document.getElementById("btnCalendrierEnfant")
-                    btnCalendrierEnfantListe.addEventListener("click", () => {
-                        totalModalCalendar.classList.toggle("hidden")
-                    })
                 </script>
             </div>
 
         </div>
-    @endsection
+@endsection
