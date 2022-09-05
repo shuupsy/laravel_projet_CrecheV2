@@ -1,3 +1,20 @@
+/* Sidebar */
+let sidebar = document.querySelector('.sidebar')
+let burger = document.querySelector('#btn')
+
+burger.onclick = function () {
+    sidebar.classList.toggle('open')
+    burger.classList.toggle('bx-x')
+}
+
+/* NAVBAR (mobile) */
+/* let burger = document.querySelector('#burger')
+burger.onclick = function () {
+    sidebar.classList.toggle('open')
+
+} */
+
+
 /* PANEL */
 panelBtn = document.querySelectorAll('.panelBtn') // Tous les icônes
 modalWindow = document.querySelectorAll('.modalWindow') // Toutes les modals
@@ -20,7 +37,7 @@ panelBtn.forEach((button, index) => {
     })
 });
 
-/* Horaire */
+/* Modal Horaire */
 let heureActuelle = document.querySelector('#heureActuelle')
 
 function hour() {
@@ -33,7 +50,7 @@ function hour() {
 hour(), setInterval(hour, 6000)
 
 
-/* Température */
+/* Modal Température */
 let rangeSlider = document.getElementById("rs-range-line");
 let rangeBullet = document.getElementById("rs-bullet");
 
@@ -42,3 +59,5 @@ rangeSlider.addEventListener("input", showSliderValue, false);
 function showSliderValue() {
     rangeBullet.innerHTML = rangeSlider.value + '°C';
 }
+
+

@@ -1,42 +1,47 @@
-<div class="flex flex-col w-64 h-screen px-4 py-8 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
-    <div class="mt-6"></div>
+<div class="text-end"><i class='bx bx-menu p-2 text-2xl border-2 border-slate-600 rounded-full cursor-pointer'
+        id="btn"></i></div>
+
+<div class="sidebar flex flex-col h-screen px-4 py-8 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
+
 
     <div class="flex flex-col justify-between flex-1 mt-6">
         <nav>
             {{-- Titre --}}
-            <div>
-                <h1 class="text-3xl"><i class='bx bxs-baby-carriage'></i> BABY'ZOU</h1>
+            <div class='flex items-center gap-5'>
+                <i class='bx bxs-baby-carriage text-4xl'></i>
+                <h1 class="text-xl">BABY'ZOU</h1>
             </div>
 
-            {{-- Section --}}
-            <div class="mt-20">
-                <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
-                    href="{{ Route('backAccueil') }}">
-                    <i class='bx bx-user'></i>
-                    <span class="mx-4 font-medium">Section</span>
+            <div class='flex flex-col gap-5 mt-20'>
+                {{-- Section --}}
+                    <a class="flex items-center gap-5 px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
+                        href="{{ Route('backAccueil') }}">
+                        <i class='bx bx-user text-xl'></i>
+                        <span class="font-medium">Section</span>
+                    </a>
+
+                {{-- Calendrier --}}
+                <a class="flex items-center gap-5 px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
+                    href="{{ Route('backCalendrier') }}">
+                    <i class='bx bx-calendar text-xl'></i>
+                    <span class="font-medium">Calendrier</span>
+                </a>
+
+                {{-- Inventaire --}}
+                <a class="flex items-center gap-5 px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
+                    href="{{ Route('backInventaire') }}">
+                    <i class='bx bx-shopping-bag text-xl'></i>
+                    <span class="font-medium">Inventaire</span>
+                </a>
+
+                {{-- Inventaire --}}
+                <a class="flex items-center gap-5 px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
+                    href="#">
+                    <i class='bx bx-chat text-xl'></i>
+                    <span class="font-medium">Messagerie</span>
                 </a>
             </div>
 
-            {{-- Calendrier --}}
-            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
-                href="{{ Route('backCalendrier') }}">
-                <i class='bx bx-calendar'></i>
-                <span class="mx-4 font-medium">Calendrier</span>
-            </a>
-
-            {{-- Inventaire --}}
-            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
-                href="{{ Route('backInventaire') }}">
-                <i class='bx bx-shopping-bag'></i>
-                <span class="mx-4 font-medium">Inventaire</span>
-            </a>
-
-            {{-- Inventaire --}}
-            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
-                href="#">
-                <i class='bx bx-chat'></i>
-                <span class="mx-4 font-medium">Messagerie</span>
-            </a>
 
         </nav>
 
