@@ -16,6 +16,18 @@ body {
     display: flex;
 }
 
+.sidebar { /* Navbar */
+    width: 16rem;
+    transition: all 0.5s ease;
+    z-index: 99;
+}
+
+.burger { /* Menu burger */
+    display: none;
+}
+
+
+/* Panel (NURSE) */
 .panelActive{
     background-color: #8EC9C1;
 }
@@ -39,7 +51,7 @@ body {
     display: inline-block;
   }
 
-  #sleep_option input[type="radio"]:checked + span {
+#sleep_option input[type="radio"]:checked + span {
     background-color: #fec89a;
   }
 
@@ -89,17 +101,4 @@ body {
     cursor: pointer;
     -webkit-appearance: none;
 }
-
-
-/* Navbar */
-.sidebar {
-    width: 16rem;
-    transition: all 0.5s ease;
-    z-index: 99;
-}
-
-.burger {
-    display: none;
-}
-/* Fin nav */
 

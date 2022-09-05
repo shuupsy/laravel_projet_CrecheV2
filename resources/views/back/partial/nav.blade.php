@@ -1,8 +1,8 @@
 <div class="burger">
-    <i class='bx bx-menu p-2 text-2xl border-2 border-slate-600 rounded-full cursor-pointer'  onclick="Burger()"></i>
+    <i class='bx bx-menu p-2 text-2xl border-2 border-slate-600 rounded-full cursor-pointer' onclick="Burger()"></i>
 </div>
 
-<div class="sidebar flex flex-col h-screen px-4 py-8 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
+<div class="sidebar flex flex-col h-screen px-4 pt-8 pb-3 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
 
 
     <div class="flex flex-col justify-between flex-1 mt-6">
@@ -11,15 +11,21 @@
             <div class='flex items-center gap-5'>
                 <i class='bx bxs-baby-carriage text-4xl'></i>
                 <h1 class="text-xl">BABY'ZOU</h1>
+                {{-- A SUPPRIMER --}}
+                <a href="/frontend/accueil">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                    <span>GO PARENTS</span>
+                </a>
+                {{-- A SUPPRIMER --}}
             </div>
 
             <div class='flex flex-col gap-5 mt-20'>
                 {{-- Section --}}
-                    <a class="flex items-center gap-5 px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
-                        href="{{ Route('backAccueil') }}">
-                        <i class='bx bx-user text-xl'></i>
-                        <span class="font-medium">Section</span>
-                    </a>
+                <a class="flex items-center gap-5 px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
+                    href="{{ Route('backAccueil') }}">
+                    <i class='bx bx-user text-xl'></i>
+                    <span class="font-medium">Section</span>
+                </a>
 
                 {{-- Calendrier --}}
                 <a class="flex items-center gap-5 px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
@@ -54,11 +60,6 @@
             <h4 class="mx-2 font-medium text-gray-800 dark:text-gray-200 hover:underline">Compte puéricultrice</h4>
         </div>
 
-        {{-- A SUPPRIMER --}}
-        <a href="/frontend/accueil">
-            <i class='bx bx-log-out' id="log_out"></i>
-            <span>GO PARENTS</span>
-        </a>
 
     </div>
 </div>

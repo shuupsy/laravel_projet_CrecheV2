@@ -2,14 +2,20 @@
     <i class='bx bx-menu p-2 text-2xl border-2 border-slate-600 rounded-full cursor-pointer' onclick="Burger()"></i>
 </div>
 
-<div class="sidebar flex flex-col h-screen px-4 py-8 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
+<div class="sidebar flex flex-col h-screen px-4 pt-8 pb-3 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
 
     <div class="flex flex-col justify-between flex-1 mt-6">
         <nav>
             {{-- Titre --}}
-            <div class="flex items-center gap-5 mb-16">
+            <div class="flex items-center gap-5 mb-20">
                 <i class='bx bxs-baby-carriage text-4xl'></i>
                 <h1 class="text-xl">BABY'ZOU</h1>
+                {{-- A SUPPRIMER --}}
+                <a href="/backend/nurseAccueil">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                    <span>GO NURSE</span>
+                </a>
+                {{-- A SUPPRIMER --}}
             </div>
 
             <div class='flex flex-col gap-5'>
@@ -65,9 +71,5 @@
                 alt="avatar" />
             <h4 class="mx-2 font-medium text-gray-800 dark:text-gray-200 hover:underline">Compte parents</h4>
         </div>
-        <a href="/backend/nurseAccueil">
-            <i class='bx bx-log-out' id="log_out"></i>
-            <span>GO NURSE</span>
-        </a>
     </div>
 </div>

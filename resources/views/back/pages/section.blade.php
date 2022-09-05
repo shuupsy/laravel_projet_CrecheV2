@@ -1,15 +1,14 @@
 @extends('back.layout.index')
 
 @section('content')
-    <section class="sizeIcon flex justify-center bg-white dark:bg-gray-900">
-        <div class="container px-6 py-3 mx-auto">
+    <section class="sizeIcon bg-white dark:bg-gray-900">
 
             {{-- Titre --}}
             <div>
                 <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Enfants
                     inscrits</h1>
 
-                <p class="max-w-2xl mx-auto my-3 text-center text-gray-500 dark:text-gray-300">
+                <p class="my-3 text-center text-gray-500 dark:text-gray-300">
                     Section: Bébé, Moyen, Grand
                 </p>
             </div>
