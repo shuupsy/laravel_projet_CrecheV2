@@ -7,53 +7,75 @@
     </div>
 
     <hr class="my-8">
-    <div class="sizeIcon flex flex-wrap justify-center">
 
-        <div id="btnClock" class="flex items-center flex-col">
-            <div id="clock" class="h-48 w-48 m-2 "></div>
-            <div>Heures</div>
+    {{-- Icones --}}
+    <div class="sizeIcon grid grid-cols-5 gap-8 px-24 mx-auto justify-center">
+        {{-- Icone Heure --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="clock" class="h-28 w-28 my-4 "></div>
+            <div>Horaires</div>
         </div>
-        <div id="btnHumeur" class="flex items-center flex-col">
-            <div id="humeur" class="h-48 w-48 m-2 "></div>
+        {{-- Icone Humeur --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="humeur" class="h-28 w-28 my-4 "></div>
             <div>Humeur</div>
         </div>
-        <div id="btnActivite" class="flex items-center flex-col">
-            <div id="activity" class="h-48 w-48 m-2 "></div>
+        {{-- Icone Activité --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="activity" class="h-28 w-28 my-4 "></div>
             <div>Activité</div>
         </div>
-        <div id="btnRepas" class="flex items-center flex-col">
-            <div id="repas"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Repas --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="repas"class="h-28 w-28 my-4 "></div>
             <div>Repas</div>
         </div>
-        <div id="btnSleep" class="flex items-center flex-col">
-            <div id="sommeil"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Sommeil --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="sommeil"class="h-28 w-28 my-4 "></div>
             <div>Sommeil</div>
         </div>
-        <div id="btnChange" class="flex items-center flex-col">
-            <div id="change"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Change --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="change"class="h-28 w-28 my-4 "></div>
             <div>Change</div>
         </div>
-        <div id="btnDiarrhe" class="flex items-center flex-col">
-            <div id="diarrhe"class="h-48 w-48 m-2 "></div>
-            <div>Diarrhé</div>
+        {{-- Icone Diarrhée --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="diarrhe"class="h-28 w-28 my-4 "></div>
+            <div>Diarrhée</div>
         </div>
-        <div id="btnFievre" class="flex items-center flex-col">
-            <div id="fievre"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Fièvre --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="fievre"class="h-28 w-28 my-4 "></div>
             <div>Fièvre</div>
         </div>
-        <div id="btnBlessure" class="flex items-center flex-col">
-            <div id="blessure"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Blessure --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="blessure"class="h-28 w-28 my-4 "></div>
             <div>Blessure</div>
         </div>
-        <div id="btnSante" class="flex items-center flex-col">
-            <div id="sante"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Santé --}}
+        <div
+            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="sante"class="h-28 w-28 my-4 "></div>
             <div>Santé</div>
         </div>
     </div>
 
+    {{-- Modals --}}
     <div class="absolute flex justify-center items-center w-screen my-20 sizeIcon">
         <!--modal heure-->
-        <div id="modalClock" class="hidden flex justify-center modalClock flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalClock flex-col items-center">
             <p>Horaire d'Arrivée / Sortie</p>
             <span id="heureActuelle" class="my-4 border-2 px-5 py-1"></span>
             <div>
@@ -80,7 +102,7 @@
             </div>
         </div>
         <!--modal Humeur-->
-        <div id="modalHumeur" class="hidden flex justify-center modalHumeur flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalHumeur flex-col items-center">
             <p class="text-3xl">Humeur en météo</p>
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
                 @csrf
@@ -139,7 +161,7 @@
             </form>
         </div>
         <!--modal activité-->
-        <div id="modalActivite" class="hidden flex justify-center modalActivite flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
             <p class="text-3xl">Activités</p>
             <p class="mt-5">Description</p>
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -156,7 +178,7 @@
             </form>
         </div>
         <!--modal repas-->
-        <div id="modalRepas" class="hidden flex justify-center modalRepas flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalRepas flex-col items-center">
             <p class="text-3xl">Qualité du repas</p>
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
                 @csrf
@@ -200,7 +222,7 @@
 
         </div>
         <!--modal sommeil-->
-        <div id="modalSleep" class="hidden flex justify-center modalNuit flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalNuit flex-col items-center">
             <p class="text-3xl">Qualité du repas</p>
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
                 @csrf
@@ -246,7 +268,7 @@
 
         </div>
         <!--modal change-->
-        <div id="modalChange" class="hidden flex justify-center modalChange flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
             <p>la change de {{ $data->nom }} {{ $data->prenom }} a t'elle été effectué ?</p>
             <div class="mt-10">
                 <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -260,7 +282,7 @@
             </div>
         </div>
         <!--modal diarrhé-->
-        <div id="modalDiarrhe" class="hidden flex justify-center modalChange flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
             <p>{{ $data->nom }} {{ $data->prenom }} a t'elle eu la diarrhé ?</p>
             <div class="mt-10">
                 <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -274,7 +296,7 @@
             </div>
         </div>
         <!--modal fievre-->
-        <div id="modalFievre" class="hidden flex justify-center modalChange flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
             <p>Fièvre de: {{ $data->nom }} {{ $data->prenom }}</p>
             <div class="mt-10">
                 <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -302,7 +324,7 @@
         </div>
 
         <!--modal blessure-->
-        <div id="modalBlessure" class="hidden flex justify-center modalActivite flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
             <p class="text-3xl">Blessures/soucis</p>
             <p class="mt-5">Description</p>
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -319,7 +341,7 @@
             </form>
         </div>
         <!--modal santé-->
-        <div id="modalSante" class="hidden flex justify-center modalActivite flex-col items-center">
+        <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
             <p class="text-3xl">Santé</p>
             <p class="mt-5">Description</p>
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">

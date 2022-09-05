@@ -24,7 +24,7 @@
     </main>
 
     {{-- Link JS --}}
-    <script src="/assets/js/modal.js"></script>
+    <script src="/assets/js/panel.js"></script>
 </body>
 
 </html>

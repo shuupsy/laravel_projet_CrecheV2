@@ -1,3 +1,4 @@
+
 //modal apparition
 let btnClock = document.getElementById("btnClock");
 let modalClock = document.getElementById("modalClock")
