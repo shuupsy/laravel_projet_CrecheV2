@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/assets/css/media.css">
     {{-- Link BoxIcons --}}
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <title>PARENT</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             @yield('content')
         </main>
     </div>
-    
+
     {{-- Link JS --}}
     <script src="/assets/js/modal.js"></script>
 </body>

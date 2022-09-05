@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/media.css">
     {{-- BoxIcons --}}
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <title>NURSE</title>
 </head>
 <body>
     <div class="flex">
