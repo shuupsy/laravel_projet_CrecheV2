@@ -2,8 +2,8 @@
 
 @section('content')
     {{-- Header --}}
-    <div class="text-center text-5xl my-10">
-        <h1>Baby'zou</h1>
+    <div class="flex items-center justify-end text-5xl my-6 mx-7">
+        <h1>Dashboard - <span class='font-bold'>{{ $data -> prenom }} {{ $data -> nom }}</span></h1>
     </div>
 
     <hr class="my-8">
