@@ -1,0 +1,42 @@
+.activeDay {
+    height: 1.5rem;
+    width:1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 200;
+    padding: .25rem;
+    border-radius: 50%;
+    background-color: #8EC9C1;
+}
+
+.activiteContainer{
+    padding: 2rem;
+    overflow: auto;
+    width: 25rem;
+    border-radius: .5rem;
+    background-color: #D8E2DC;
+}
+
+.contenuActivite {
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: .20fr .75fr 1fr;
+    align-items: center;
+    gap: .5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+}
+
+.dateC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    font-weight: bold;
+    border-right: 1px solid #000;
+    font-size: 20px;
+    padding: 1rem;
+}

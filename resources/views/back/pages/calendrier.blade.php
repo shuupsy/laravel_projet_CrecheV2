@@ -23,11 +23,17 @@
                 </div>
             </div>
         </div>
-        <div id="GenerateDay" class="Information bg-zinc-300 flex flex-col items-left">
+        <div id="GenerateDay" class="Information bg-zinc-300 flex flex-col gap-2 items-left activiteContainer">
             @foreach ($journalier as $item)
-                <p class="m-2">
-                {{$item->updated_at->format("d")}} / {{$item->activity}}: {{$item->response}}
-                </p>
+            <div class="contenuActivite">
+                <div class="dateC">{{$item->updated_at->format("d")}}</div>
+                <div>{{$item->activity}}:</div>
+                <div>{{$item->response}}</div>
+            </div>
+
+
+
+
             @endforeach
         </div>
     </div>
