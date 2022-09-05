@@ -45,7 +45,6 @@ let modalArray = [
 
 btnClock.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
-        btnClock.classList.add('panelActive')
         modalArray[index].classList.add("hidden");
     }
     modalClock.classList.remove("hidden");
@@ -105,7 +104,7 @@ btnDiarrhe.addEventListener("click", () => {
     modalDiarrhe.classList.remove("hidden");
 })
 
-//heure actuelle
+// Heure actuelle
 let heureActuelle = document.querySelector('#heureActuelle')
 
 function hour() {
