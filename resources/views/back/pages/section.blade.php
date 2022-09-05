@@ -18,33 +18,29 @@
             <div class="grid grid-cols-1 gap-2 mt-8 xl:mt-10 md:grid-cols-2 xl:grid-cols-4">
 
                 @foreach ($data as $item)
-                    <form action="{{ $item->id }}/panel" method="POST">
-                        @csrf
+                    {{-- Structure CARD --}}
+                    <a href='/backend/{{ $item->id }}/panel'>
+                        <div
+                            class="w-64 flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-[#bc6c25] dark:border-gray-700 dark:hover:border-transparent">
 
-                        {{-- Structure CARD --}}
-                        <button>
-                            <div
-                                class="w-64 flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-[#bc6c25] dark:border-gray-700 dark:hover:border-transparent">
+                            <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                                src="/assets/img/{{ $item->img }}" alt="">
 
-                                <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
-                                    src="/assets/img/{{ $item->img }}" alt="">
+                            <h1
+                                class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                                {{ $item->prenom }} <span class='uppercase'>{{ $item->nom }}</span></h1>
 
-                                <h1
-                                    class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
-                                    {{ $item->prenom }} <span class='uppercase'>{{ $item->nom }}</span></h1>
+                            <p class="mt-2 text-gray-500 dark:text-gray-300 group-hover:text-gray-300">
+                                {{ $item->age }}
+                                @if ($item->age > 1)
+                                    ans
+                                @else
+                                    an
+                                @endif
+                            </p>
 
-                                <p class="mt-2 text-gray-500 dark:text-gray-300 group-hover:text-gray-300">
-                                    {{ $item->age }}
-                                    @if ($item->age > 1)
-                                        ans
-                                    @else
-                                        an
-                                    @endif
-                                </p>
-
-                            </div>
-                        </button>
-                    </form>
+                        </div>
+                    </a>
                 @endforeach
 
             </div>
