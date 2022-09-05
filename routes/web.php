@@ -29,6 +29,7 @@ Route::patch('/backend/inventaire/ajouter/{id}',[InventairenurseController::clas
 
 //backend calendrier
 Route::get('/backend/calendrier',[CalendriernurseController::class,"index"])->name("backCalendrier");
+Route::get('/backend/calendrier/{id}',[CalendriernurseController::class,"affichageDay"]);
 
 //frontend accueil
 Route::get('/frontend/accueil',[FrontaccueilController::class,"index"])->name("frontAccueil");

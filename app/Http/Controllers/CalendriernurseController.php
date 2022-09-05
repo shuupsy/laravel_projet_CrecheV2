@@ -23,6 +23,12 @@ class CalendriernurseController extends Controller
         return view("back.pages.calendrier",compact("enfants", "journalier"));
     }
 
+    public function affichageDay($id)
+    {
+        $enfants = Backaccueil::all();
+        $journalier = Journalparents::whereDay("updated_at", "=", $id)->get();
+        return view("back.pages.calendrier",compact("enfants","journalier"));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -32,6 +38,7 @@ class CalendriernurseController extends Controller
     {
         //
     }
+
 
     /**
      * Store a newly created resource in storage.
