@@ -47,3 +47,4 @@ Route::get('/frontend/inventaire',[InventaireparentsController::class,"index"])-
 Route::get('/frontend/profil',[Profilenfant::class,"index"])->name("frontProfil");
 //frontend messagerie
 Route::get('/frontend/messagerie',[MessageenfantsController::class,"index"])->name("frontMessagerie");
+Route::post("/frontend/messagerie/envoi/{id}",[MessageenfantsController::class,"store"]);

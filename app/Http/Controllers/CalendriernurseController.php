@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Backaccueil;
+use App\Models\Frontaccueil;
 use App\Models\Journalparents;
+use App\Models\Messageenfants;
 use App\Models\Calendriernurse;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreCalendriernurseRequest;
@@ -20,14 +22,18 @@ class CalendriernurseController extends Controller
     {
         $enfants = Backaccueil::all();
         $journalier = Journalparents::all();
-        return view("back.pages.calendrier",compact("enfants", "journalier"));
+        $messages = Messageenfants::all();
+        $nurses = Frontaccueil::all();
+        return view("back.pages.calendrier",compact("enfants", "journalier","messages","nurses"));
     }
 
     public function affichageDay($id)
     {
         $enfants = Backaccueil::all();
+        $messages = Messageenfants::all();
+        $nurses = Frontaccueil::all();
         $journalier = Journalparents::whereDay("updated_at", "=", $id)->get();
-        return view("back.pages.calendrier",compact("enfants","journalier"));
+        return view("back.pages.calendrier",compact("enfants","journalier","messages","nurses"));
     }
     /**
      * Show the form for creating a new resource.
