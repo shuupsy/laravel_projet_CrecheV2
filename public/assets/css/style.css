@@ -34,15 +34,14 @@ body {
     justify-content: center;
 }
 
-#icones img {
+.panelBtn img {
     width: 100%;
     object-fit: cover;
 }
 
-.panelActive{
+.panelActive{ /* Au clic, devient vert */
     background-color: #8EC9C1;
 }
-
 
 .modalWindow {
     width: 600px;
