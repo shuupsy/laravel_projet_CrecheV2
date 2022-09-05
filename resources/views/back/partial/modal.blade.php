@@ -227,7 +227,9 @@
                 <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
                 <input class="hidden" type="text" value="Change" name="activity">
 
-                <button type="submit" name="response" value="{{ $data->nom }} {{ $data->prenom }} a été changé !" class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                <button type="submit" name="response"
+                    value="{{ $data->nom }} {{ $data->prenom }} a été changé !"
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                     Oui
                 </button>
             </form>
@@ -244,38 +246,39 @@
                 <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
                 <input class="hidden" type="text" value="Diarrhée" name="activity">
 
-                <button type="submit" name="response" value="{{ $data->nom }} {{ $data->prenom }} a eu la diarrhée." class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                <button type="submit" name="response"
+                    value="{{ $data->nom }} {{ $data->prenom }} a eu la diarrhée."
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                     Oui
                 </button>
         </div>
     </div>
-    <!--modal fievre-->
+
+    <!--modal FIEVRE-->
     <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
-        <p>Fièvre de: {{ $data->nom }} {{ $data->prenom }}</p>
-        <div class="mt-10">
-            <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
-                @csrf
-                <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
-                <input class="hidden" type="text" value="Temperature" name="activity">
-                <div class="container_temperature">
-                    <div class="flex flex-col text-center range-slider mt-5">
-                        <span id="rs-bullet" class="text-3xl">37°C</span>
-                        <input id="rs-range-line" type="range" name="response" min="35" step="0.1"
-                            max="40">
-                    </div>
+        <h3 class='text-2xl font-bold'>Fièvre de: {{ $data->prenom }} {{ $data->nom }}</h3>
 
+        <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
+            @csrf
+            <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
+            <input class="hidden" type="text" value="Temperature" name="activity">
+
+            <div class="container_temperature mt-2 mb-8">
+                <div class="flex flex-col text-center range-slider mt-5">
+                    <span id="rs-bullet" class="text-3xl">37°C</span>
+                    <input id="rs-range-line" type="range" name="response" min="35" step="0.1"
+                        max="40">
                 </div>
+            </div>
 
-                <div class="flex justify-center">
-                    <button
-                        class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                        Valider
-                    </button>
-                </div>
+            <div class="flex justify-center">
+                <button
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    Valider
+                </button>
+            </div>
 
-            </form>
-
-        </div>
+        </form>
     </div>
 
     <!--modal BLESSURE-->
