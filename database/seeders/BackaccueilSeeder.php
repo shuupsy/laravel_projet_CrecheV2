@@ -18,27 +18,31 @@ class BackaccueilSeeder extends Seeder
         DB::table("backaccueils")->insert([
             [
                 "nom" => "Meunier",
-                "prenom" => "Henriette",
-                "img" => "photo-1546015720-b8b30df5aa27.avif",
-                "surnom" => "Surnom"
+                "prenom" => "Henry",
+                "img" => "team/photo-1546015720-b8b30df5aa27.avif",
+                "sexe" => "H",
+                "age" => 3
             ],
             [
                 "nom" => "Fischer",
                 "prenom" => "Claire",
-                "img" => "photo-1548897969-80be2924dc9f.avif",
-                "surnom" => "Surnom"
+                "img" => "team/photo-1548897969-80be2924dc9f.avif",
+                "sexe" => "F",
+                "age" => 1
             ],
             [
-                "nom" => "Inès",
-                "prenom" => "Gimenes",
-                "img" => "photo-1608365151231-7dbed3034787.avif",
-                "surnom" => "Surnom"
+                "nom" => "Gimenes",
+                "prenom" => "Inès",
+                "img" => "team/photo-1608365151231-7dbed3034787.avif",
+                "sexe" => "F",
+                "age" => 2
             ],
             [
                 "nom" => "Leger",
-                "prenom" => "Julie",
-                "img" => "photo-1503454537195-1dcabb73ffb9.avif",
-                "surnom" => "Surnom"
+                "prenom" => "Jules",
+                "img" => "team/photo-1503454537195-1dcabb73ffb9.avif",
+                "sexe" => "H",
+                "age" => 2
             ]
             ]);
     }
