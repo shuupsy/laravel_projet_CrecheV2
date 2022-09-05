@@ -1,7 +1,7 @@
 <div class="absolute flex justify-center items-center w-screen my-20 sizeIcon">
     <!--modal HORAIRE-->
     <div class="modalWindow hidden flex justify-evenly flex-col items-center text-center">
-        <h3 class='text-xl font-black'>Horaire d'Arrivée / Sortie</h3>
+        <h3 class='text-2xl font-black'>Horaire d'Arrivée / Sortie</h3>
 
         <span id="heureActuelle" class="my-4 border-2 px-5 py-1 border-double border-4 font-black border-stone-800 rounded-md"></span>
 
@@ -32,7 +32,7 @@
 
     <!--modal HUMEUR-->
     <div class="modalWindow hidden flex justify-evenly flex-col items-center modalHumeur ">
-        <h3 class="text-xl font-bold">Humeur en météo</h3>
+        <h3 class="text-2xl font-bold">Humeur en météo</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
             @csrf
@@ -93,7 +93,7 @@
 
     <!--modal ACTIVITE-->
     <div class="modalWindow hidden flex justify-center flex-col items-center" id='modal-activity'>
-        <p class="text-xl font-bold">Activité</p>
+        <p class="text-2xl font-bold">Activité</p>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col'>
             @csrf
@@ -111,44 +111,45 @@
         </form>
     </div>
 
-    <!--modal repas-->
-    <div class="modalWindow hidden flex justify-center modalRepas flex-col items-center">
-        <p class="text-3xl">Qualité du repas</p>
+    <!--modal REPAS-->
+    <div class="modalWindow hidden flex justify-center flex-col items-center">
+        <h3 class="text-2xl font-bold">Comment {{ $data -> prenom }} a mangé ?</h3>
+
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
             @csrf
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Repas" name="activity">
-            <div class='flex mt-10'>
+            <div class='flex gap-6 my-8'>
                 <div class="flex flex-col justify-center mx-3 text-xl">
                     <label class="my-2" for="rien">
-                        rien
+                        Pas bien
                     </label>
                     <input type="radio" name="response" value="rien mangé" id="rien">
                 </div>
 
                 <div class="flex flex-col justify-center mx-3 text-xl">
                     <label class="my-2" for="pasbien">
-                        pas bien
+                        Moyen
                     </label>
                     <input type="radio" name="response" value="pas beaucoup mangé" id="pasbien">
                 </div>
                 <div class="flex flex-col justify-center mx-3 text-xl">
                     <label class="my-2" for="bien">
-                        bien
+                        Bien
                     </label>
                     <input type="radio" name="response" value="assez bien mangé" id="bien">
                 </div>
                 <div class="flex flex-col justify-center mx-3 text-xl">
                     <label class="my-2" for="tresbien">
-                        tres bien
+                        Très bien
                     </label>
                     <input type="radio" name="response" value="très bien mangé" id="tresbien">
                 </div>
             </div>
 
-            <div class="flex justify-center mt-10">
+            <div class="flex justify-center">
                 <button
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                     Valider
                 </button>
             </div>
@@ -157,7 +158,7 @@
     </div>
 
     <!--modal sommeil-->
-    <div class="modalWindow hidden flex justify-center modalNuit flex-col items-center">
+    <div class="modalWindow hidden flex justify-center flex-col items-center">
         <p class="text-3xl">Qualité du repas</p>
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
             @csrf
