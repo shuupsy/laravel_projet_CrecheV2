@@ -4,7 +4,7 @@
         <h3 class='text-2xl font-black'>Horaire d'Arrivée / Sortie</h3>
 
         <span id="heureActuelle"
-            class="my-4 border-2 px-5 py-1 border-double border-4 font-black border-stone-800 rounded-md"></span>
+            class="text-xl my-4 border-2 px-5 py-1 border-double border-4 font-black border-stone-800 rounded-md"></span>
 
         <div class='flex gap-6 text-center'>
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
