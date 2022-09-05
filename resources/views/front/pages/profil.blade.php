@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="timeline">
-        <div class="container left">
+        <div class="containerProfil left">
             <div class="content">
                 <div class="texte">
                     <p class="soustitre">genre</p>
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="container right">
+        <div class="containerProfil right">
             <div class="content">
                 <div class="w-16 h-16 p-4 flex justify-center items-center bg-[#D8E2DC] rounded-full">
                     <img class="w-full"src="https://www.svgrepo.com/show/203133/ruler.svg" alt="">
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="container left">
+        <div class="containerProfil left">
             <div class="content">
                 <div class="texte">
                     <p class="soustitre">weight</p>
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class="container right">
+        <div class="containerProfil right">
             <div class="content">
                 <div class="w-16 h-16 p-4 flex justify-center items-center bg-[#D8E2DC] rounded-full">
                     <img class="w-full"src="https://www.svgrepo.com/show/385146/emergency-health-healthcare-hospital-kit-medical.svg"
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <div class="container left">
+        <div class="containerProfil left">
             <div class="content">
                 <div class="texte">
                     <p class="soustitre">Teething</p>
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-        <div class="container right">
+        <div class="containerProfil right">
             <div class="content">
                 <div class="w-16 h-16 p-4 flex justify-center items-center bg-[#D8E2DC] rounded-full">
                     <img class="w-full" src="https://www.svgrepo.com/show/267696/baby-food.svg" alt="">
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="container left">
+        <div class="containerProfil left">
             <div class="content">
                 <div class="texte">
                     <p class="soustitre">Picture autorisation</p>
@@ -96,7 +96,7 @@
                 </div>
             </div>
         </div>
-        <div class="container right">
+        <div class="containerProfil right">
             <div class="content">
                 <div class="w-16 h-16 p-4 flex justify-center items-center bg-[#D8E2DC] rounded-full">
                     <img class="w-full" src="https://www.svgrepo.com/show/13967/park.svg" alt="">
@@ -107,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="container left">
+        <div class="containerProfil left">
             <div class="content">
                 <div class="texte">
                     <p class="soustitre">Feces observations</p>
