@@ -54,13 +54,11 @@
     <div class="Information flex flex-col items-center">
         @foreach ($journalier as $item)
         {{ date('d/m/Y') }}
-            @if(1 == 1)
                 <div class="w-11/12 bg-blue-200 h-10 m-2 flex items-center">
                     <p class="ml-5">
                         {{$item->updated_at->format('d/m/Y')}}: {{$item->activity}}: {{$item->response}} de {{$enfants[($item->backaccueil_id)-1]->nom}} {{$enfants[($item->backaccueil_id)-1]->prenom}}
                     </p>
                 </div>
-            @else
         @endforeach
     </div>
 
