@@ -1,22 +1,31 @@
 //modal apparition
 let btnClock = document.getElementById("btnClock");
 let modalClock = document.getElementById("modalClock")
+
 let btnHumeur = document.getElementById("btnHumeur");
 let modalHumeur = document.getElementById("modalHumeur")
+
 let btnActivite = document.getElementById("btnActivite");
 let modalActivite = document.getElementById("modalActivite")
+
 let btnRepas = document.getElementById("btnRepas");
 let modalRepas = document.getElementById("modalRepas")
+
 let btnSleep = document.getElementById("btnSleep");
 let modalSleep = document.getElementById("modalSleep")
+
 let btnChange = document.getElementById("btnChange");
 let modalChange = document.getElementById("modalChange")
+
 let btnBlessure = document.getElementById("btnBlessure");
 let modalBlessure = document.getElementById("modalBlessure")
+
 let btnSante = document.getElementById("btnSante");
 let modalSante = document.getElementById("modalSante")
+
 let btnFievre = document.getElementById("btnFievre");
 let modalFievre = document.getElementById("modalFievre")
+
 let btnDiarrhe = document.getElementById("btnDiarrhe");
 let modalDiarrhe = document.getElementById("modalDiarrhe")
 
@@ -33,8 +42,10 @@ let modalArray = [
     modalFievre,
     modalDiarrhe
 ]
+
 btnClock.addEventListener("click", () => {
     for (let index = 0; index < modalArray.length; index++) {
+        btnClock.classList.add('panelActive')
         modalArray[index].classList.add("hidden");
     }
     modalClock.classList.remove("hidden");
