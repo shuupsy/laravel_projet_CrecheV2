@@ -96,11 +96,13 @@
     position: relative;
     display: flex;
     align-items: center;
+    gap: 1rem;
+    width: 20rem
   }
 
   /* Place the container to the left */
 .left {
-    left: 0;
+    left: -8rem;
   }
 
   /* Place the container to the right */
