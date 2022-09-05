@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             BackaccueilSeeder::class,
             InventairenurseSeeder::class,
-            InventaireparentsSeeder::class
+            InventaireparentsSeeder::class,
+            FrontaccueilSeeder::class
         ]);
     }
 }

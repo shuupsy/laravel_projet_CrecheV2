@@ -11,15 +11,10 @@ return new class extends Migration
      *
      * @return void
      */
-    // TABLE POUR LA TEAM !! wesh
     public function up()
     {
-        Schema::create('frontaccueils', function (Blueprint $table) {
+        Schema::create('messageenfants', function (Blueprint $table) {
             $table->id();
-            $table->string("img");
-            $table->string("nom");
-            $table->string("prenom");
-            $table->string("poste");
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('frontaccueils');
+        Schema::dropIfExists('messageenfants');
     }
 };

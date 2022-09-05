@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessageenfantsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Profilenfant;
 use App\Http\Controllers\PanelIndividuel;
@@ -44,3 +45,5 @@ Route::get('/frontend/inventaire',[InventaireparentsController::class,"index"])-
 
 //frontend profilEnfant
 Route::get('/frontend/profil',[Profilenfant::class,"index"])->name("frontProfil");
+//frontend messagerie
+Route::get('/frontend/messagerie',[MessageenfantsController::class,"index"])->name("frontMessagerie");
