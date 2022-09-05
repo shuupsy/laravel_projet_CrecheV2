@@ -98,7 +98,7 @@ body {
     z-index: 99;
 }
 
-#btn {
+.burger {
     display: none;
 }
 /* Fin nav */

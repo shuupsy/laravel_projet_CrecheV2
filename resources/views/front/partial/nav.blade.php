@@ -1,12 +1,13 @@
-<div class="text-end"><i class='bx bx-menu p-2 text-2xl border-2 border-slate-600 rounded-full cursor-pointer'
-        id="btn"></i></div>
+<div class="burger">
+    <i class='bx bx-menu p-2 text-2xl border-2 border-slate-600 rounded-full cursor-pointer' onclick="Burger()"></i>
+</div>
 
 <div class="sidebar flex flex-col h-screen px-4 py-8 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
 
     <div class="flex flex-col justify-between flex-1 mt-6">
         <nav>
             {{-- Titre --}}
-            <div class="flex items-center gap-5 mb-20">
+            <div class="flex items-center gap-5 mb-16">
                 <i class='bx bxs-baby-carriage text-4xl'></i>
                 <h1 class="text-xl">BABY'ZOU</h1>
             </div>

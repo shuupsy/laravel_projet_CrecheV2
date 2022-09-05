@@ -15,7 +15,7 @@
     <title>PARENT</title>
 </head>
 
-<body class="flex">
+<body>
     <header>
         @include('front.partial.nav')
     </header>
@@ -25,7 +25,7 @@
     </main>
 
     {{-- Link JS --}}
-    <script src="/assets/js/modal.js"></script>
+    <script src="/assets/js/panel.js"></script>
 </body>
 
 </html>

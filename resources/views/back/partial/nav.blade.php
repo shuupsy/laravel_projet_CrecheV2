@@ -1,5 +1,6 @@
-<div class="text-end"><i class='bx bx-menu p-2 text-2xl border-2 border-slate-600 rounded-full cursor-pointer'
-        id="btn"></i></div>
+<div class="burger">
+    <i class='bx bx-menu p-2 text-2xl border-2 border-slate-600 rounded-full cursor-pointer'  onclick="Burger()"></i>
+</div>
 
 <div class="sidebar flex flex-col h-screen px-4 py-8 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
 

@@ -1,19 +1,11 @@
 /* Sidebar */
 let sidebar = document.querySelector('.sidebar')
-let burger = document.querySelector('#btn')
+let burger = document.querySelectorAll('.btn')
 
-burger.onclick = function () {
+function Burger () {
     sidebar.classList.toggle('open')
     burger.classList.toggle('bx-x')
 }
-
-/* NAVBAR (mobile) */
-/* let burger = document.querySelector('#burger')
-burger.onclick = function () {
-    sidebar.classList.toggle('open')
-
-} */
-
 
 /* PANEL */
 panelBtn = document.querySelectorAll('.panelBtn') // Tous les icônes

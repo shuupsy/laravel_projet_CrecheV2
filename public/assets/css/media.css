@@ -2,7 +2,7 @@
     body {
         display: block;
     }
-    #btn {
+    .burger {
         display: block;
         position: fixed;
         top: 15px;
