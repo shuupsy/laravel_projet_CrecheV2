@@ -1,6 +1,9 @@
 <div class="absolute flex justify-center items-center w-screen my-20 sizeIcon">
     <!--modal HORAIRE-->
-    <div class="modalWindow hidden flex justify-evenly flex-col items-center text-center">
+    <div class="modalWindow hidden flex justify-evenly flex-col items-center text-cente relative">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class='text-2xl font-black'>Horaire d'Arrivée / Sortie</h3>
 
         <span id="heureActuelle"
@@ -33,6 +36,9 @@
 
     <!--modal HUMEUR-->
     <div class="modalWindow hidden flex justify-evenly flex-col items-center modalHumeur ">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-2xl font-bold">Humeur en météo</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -94,7 +100,10 @@
 
     <!--modal ACTIVITE-->
     <div class="modalWindow hidden flex justify-center flex-col items-center" id='modal-activity'>
-        <p class="text-2xl font-bold">Activité</p>
+
+        @include('back.partial.modal-closebtn')
+
+        <h3 class="text-2xl font-bold">Activité</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col'>
             @csrf
@@ -114,6 +123,9 @@
 
     <!--modal REPAS-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-2xl font-bold">Comment {{ $data->prenom }} a mangé ?</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -160,6 +172,9 @@
 
     <!--modal SOMMEIL-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-2xl font-bold">Durée de la sieste</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -219,6 +234,9 @@
 
     <!--modal CHANGE-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class='text-2xl font-bold'>La change de {{ $data->prenom }} a été effectuée ?</h3>
 
         <div class="my-5">
@@ -238,6 +256,9 @@
 
     <!--modal DIARRHEE-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class='text-2xl font-bold'>{{ $data->prenom }} a eu la diarrhée ?</h3>
 
         <div class="my-5">
@@ -256,6 +277,9 @@
 
     <!--modal FIEVRE-->
     <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class='text-2xl font-bold'>Fièvre de: {{ $data->prenom }} {{ $data->nom }}</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -282,6 +306,9 @@
 
     <!--modal BLESSURE-->
     <div class="modalWindow hidden flex justify-center flex-col items-center" id='modal-blessure'>
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-xl font-bold">Blessure</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col'>
@@ -302,6 +329,9 @@
 
     <!--modal SANTE-->
     <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-3xl">EN COURS</h3>
 
     </div>

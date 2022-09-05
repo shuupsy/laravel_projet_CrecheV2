@@ -29,6 +29,17 @@ panelBtn.forEach((button, index) => {
     })
 });
 
+/* Fermeture de modal avec bouton X */
+let closemodal = document.querySelectorAll('.close-x')
+
+closemodal.forEach((close, index) => {
+    close.addEventListener('click', () => {
+        modalWindow[index].classList.add("hidden") // Cache modal
+        panelBtn[index].classList.remove('panelActive') // Enlève couleur
+    })
+})
+
+
 /* Modal Horaire */
 let heureActuelle = document.querySelector('#heureActuelle')
 
