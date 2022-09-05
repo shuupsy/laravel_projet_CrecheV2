@@ -21,10 +21,9 @@
 
 .contenuActivite {
     padding: .5rem;
-    display: grid;
-    grid-template-columns: .20fr .75fr 1fr;
+    display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 1rem;
     background-color: #fff;
     border-radius: .5rem;
 }
