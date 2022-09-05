@@ -30,10 +30,6 @@
                 <div>{{$item->activity}}:</div>
                 <div>{{$item->response}}</div>
             </div>
-
-
-
-
             @endforeach
         </div>
     </div>
@@ -53,7 +49,15 @@
                 x.innerHTML = index
                 gridMonth.appendChild(x)
             }
+
         }
+
+        // function actived(x){
+        //     x.addEventListener('click', ()=>{
+
+        //     })
+        // }
         creationDay()
+
     </script>
 @endsection
