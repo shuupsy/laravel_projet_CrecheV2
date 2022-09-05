@@ -115,8 +115,3 @@ function showSliderValue() {
     rangeBullet.innerHTML = rangeSlider.value + '°C';
 }
 //calendar
-
-function affichageJournalier(x)
-{
-
-}

@@ -18,7 +18,7 @@
                 <div></div>
                 <div></div>
                 <div></div>
-                <button class="test">01</button>
+                <button>01</button>
                 <button>02</button>
                 <button>03</button>
                 <button>04</button>
@@ -53,11 +53,14 @@
     </div>
     <div class="Information flex flex-col items-center">
         @foreach ($journalier as $item)
-        <div class="w-11/12 bg-blue-200 h-10 m-2 flex items-center">
-            <p class="ml-5">
-                {{$item->updated_at}}: {{$item->activity}}: {{$item->response}} de {{$enfants[($item->backaccueil_id)-1]->nom}} {{$enfants[($item->backaccueil_id)-1]->prenom}}
-            </p>
-        </div>
+        {{ date('d/m/Y') }}
+            @if(1 == 1)
+                <div class="w-11/12 bg-blue-200 h-10 m-2 flex items-center">
+                    <p class="ml-5">
+                        {{$item->updated_at->format('d/m/Y')}}: {{$item->activity}}: {{$item->response}} de {{$enfants[($item->backaccueil_id)-1]->nom}} {{$enfants[($item->backaccueil_id)-1]->prenom}}
+                    </p>
+                </div>
+            @else
         @endforeach
     </div>
 
