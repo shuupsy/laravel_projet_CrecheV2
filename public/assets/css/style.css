@@ -41,20 +41,6 @@
 
 
 /* Modal FIEVRE */
-.container_temperature {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.box-minmax {
-    width: 200px;
-    display: flex;
-    color: #999;
-    justify-content: center;
-}
-
 #rs-bullet {
     position: relative;
     display: block;

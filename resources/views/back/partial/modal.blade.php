@@ -263,11 +263,10 @@
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Temperature" name="activity">
 
-            <div class="container_temperature mt-2 mb-8">
+            <div class="flex flex-col justify-center items-center mt-2 mb-8">
                 <div class="flex flex-col text-center range-slider mt-5">
                     <span id="rs-bullet" class="text-3xl">37°C</span>
-                    <input id="rs-range-line" type="range" name="response" min="35" step="0.1"
-                        max="40">
+                    <input id="rs-range-line" type="range" name="response" min="35" step="0.1" max="40">
                 </div>
             </div>
 
@@ -300,22 +299,10 @@
             </div>
         </form>
     </div>
-    <!--modal santé-->
-    <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
-        <p class="text-3xl">Santé</p>
-        <p class="mt-5">Description</p>
-        <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
-            @csrf
-            <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
-            <input class="hidden" type="text" value="Sante" name="activity">
-            <textarea class="m-5 areaShadow" name="response" id="" cols="30" rows="10"></textarea>
 
-            <div>
-                <button
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    Valider
-                </button>
-            </div>
-        </form>
+    <!--modal SANTE-->
+    <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
+        <h3 class="text-3xl">EN COURS</h3>
+
     </div>
 </div>
