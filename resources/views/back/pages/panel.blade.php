@@ -7,46 +7,56 @@
     </div>
 
     <hr class="my-8">
-    <div class="sizeIcon flex flex-wrap justify-center">
 
-        <div id="btnClock" class="flex items-center flex-col">
-            <div id="clock" class="h-48 w-48 m-2 "></div>
-            <div>Heures</div>
+    <div class="sizeIcon grid grid-cols-5 gap-8 px-24 mx-auto justify-center">
+        {{-- Icone Heure --}}
+        <div id="btnClock" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="clock" class="h-28 w-28 my-4 "></div>
+            <div>Horaires</div>
         </div>
-        <div id="btnHumeur" class="flex items-center flex-col">
-            <div id="humeur" class="h-48 w-48 m-2 "></div>
+        {{-- Icone Humeur --}}
+        <div id="btnHumeur" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="humeur" class="h-28 w-28 my-4 "></div>
             <div>Humeur</div>
         </div>
-        <div id="btnActivite" class="flex items-center flex-col">
-            <div id="activity" class="h-48 w-48 m-2 "></div>
+        {{-- Icone Activité --}}
+        <div id="btnActivite" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="activity" class="h-28 w-28 my-4 "></div>
             <div>Activité</div>
         </div>
-        <div id="btnRepas" class="flex items-center flex-col">
-            <div id="repas"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Repas --}}
+        <div id="btnRepas" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="repas"class="h-28 w-28 my-4 "></div>
             <div>Repas</div>
         </div>
-        <div id="btnSleep" class="flex items-center flex-col">
-            <div id="sommeil"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Sommeil --}}
+        <div id="btnSleep" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="sommeil"class="h-28 w-28 my-4 "></div>
             <div>Sommeil</div>
         </div>
-        <div id="btnChange" class="flex items-center flex-col">
-            <div id="change"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Change --}}
+        <div id="btnChange" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="change"class="h-28 w-28 my-4 "></div>
             <div>Change</div>
         </div>
-        <div id="btnDiarrhe" class="flex items-center flex-col">
-            <div id="diarrhe"class="h-48 w-48 m-2 "></div>
-            <div>Diarrhé</div>
+        {{-- Icone Diarrhée --}}
+        <div id="btnDiarrhe" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="diarrhe"class="h-28 w-28 my-4 "></div>
+            <div>Diarrhée</div>
         </div>
-        <div id="btnFievre" class="flex items-center flex-col">
-            <div id="fievre"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Fièvre --}}
+        <div id="btnFievre" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="fievre"class="h-28 w-28 my-4 "></div>
             <div>Fièvre</div>
         </div>
-        <div id="btnBlessure" class="flex items-center flex-col">
-            <div id="blessure"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Blessure --}}
+        <div id="btnBlessure" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="blessure"class="h-28 w-28 my-4 "></div>
             <div>Blessure</div>
         </div>
-        <div id="btnSante" class="flex items-center flex-col">
-            <div id="sante"class="h-48 w-48 m-2 "></div>
+        {{-- Icone Santé --}}
+        <div id="btnSante" class="flex items-center flex-col border border-zinc-800 rounded-lg">
+            <div id="sante"class="h-28 w-28 my-4 "></div>
             <div>Santé</div>
         </div>
     </div>

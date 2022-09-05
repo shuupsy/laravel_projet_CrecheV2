@@ -11,7 +11,7 @@ class PanelIndividuel extends Controller
     public function index($id)
     {
         $data = Backaccueil::find($id);
-        return view("back.pages.profilEnfant", compact("data"));
+        return view("back.pages.panel", compact("data"));
     }
     public function activity(Request $request, $id)
     {
