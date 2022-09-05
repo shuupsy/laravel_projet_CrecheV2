@@ -29,3 +29,12 @@
     height: 150px;
     padding: 15px;
 }
+
+/* Modal SOMMEIL Select OPTION */
+#sleep_option span {
+    display: inline-block;
+  }
+
+  #sleep_option input[type="radio"]:checked + span {
+    background-color: #fec89a;
+  }

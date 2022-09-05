@@ -99,7 +99,7 @@
             @csrf
             <label class="mt-5">Description</label>
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
-            <input class="hidden" type="text" value="activité" name="activity">
+            <input class="hidden" type="text" value="Activité" name="activity">
             <textarea class="shadow-lg drop-shadow-md rounded-lg mt-1 mb-5" name="response"></textarea>
 
             <div class="flex justify-end">
@@ -157,46 +157,58 @@
 
     </div>
 
-    <!--modal sommeil-->
+    <!--modal SOMMEIL-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
-        <p class="text-3xl">Qualité du repas</p>
+        <h3 class="text-2xl font-bold">Durée de la sieste</h3>
+
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
             @csrf
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Sieste" name="activity">
-            <div class='flex mt-10'>
-                <div class="flex flex-col justify-center mx-3 text-xl">
-                    <label class="my-2" for="moins1">
-                        <span>
-                            -1heure
-                        </span>
-                    </label>
-                    <input type="radio" name="response" value="presque pas dormi" id="moins1">
-                </div>
 
-                <div class="flex flex-col justify-center mx-3 text-xl">
-                    <label class="my-2" for="1a2">
-                        1 à 2 heures
-                    </label>
-                    <input type="radio" name="response" value="dormi de 1 à 2 heures" id="1a2">
-                </div>
-                <div class="flex flex-col justify-center mx-3 text-xl">
-                    <label class="my-2" for="2a3">
-                        2 à 3 heures
-                    </label>
-                    <input type="radio" name="response" value="dormi de 2 à 3 heures" id="2a3">
-                </div>
-                <div class="flex flex-col justify-center mx-3 text-xl">
-                    <label class="my-2" for="3plus">
-                        3 heures +
-                    </label>
-                    <input type="radio" name="response" value="dormi plus de 3 heures" id="3plus">
-                </div>
+            <div id='sleep_option' class='grid grid-cols-3 gap-4 text-center my-8'>
+                <label>
+                    <input class='hidden' type="radio" name="response" value="0">
+                    <span class='w-20 p-2 rounded-lg border border-[#BC6C25] cursor-pointer'>0</span>
+                </label>
+                <label>
+                    <input class='hidden' type="radio" name="response" value="0.30">
+                    <span class='w-20 p-2 rounded-lg border border-[#BC6C25] cursor-pointer'>0:30</span>
+                </label>
+                <label>
+                    <input class='hidden' type="radio" name="response" value="1.00">
+                    <span class='w-20 p-2 rounded-lg border border-[#BC6C25] cursor-pointer'>1:00</span>
+                </label>
+                <label>
+                    <input class='hidden' type="radio" name="response" value="1.30">
+                    <span class='w-20 p-2 rounded-lg border border-[#BC6C25] cursor-pointer'>1:30</span>
+                </label>
+                <label>
+                    <input class='hidden' type="radio" name="response" value="2.00">
+                    <span class='w-20 p-2 rounded-lg border border-[#BC6C25] cursor-pointer'>2:00</span>
+                </label>
+                <label>
+                    <input class='hidden' type="radio" name="response" value="2.30">
+                    <span class='w-20 p-2 rounded-lg border border-[#BC6C25] cursor-pointer'>2:30</span>
+                </label>
+                <label>
+                    <input class='hidden' type="radio" name="response" value="3.00">
+                    <span class='w-20 p-2 rounded-lg border border-[#BC6C25] cursor-pointer'>3:00</span>
+                </label>
+
+                <label>
+                    <input class='hidden' type="radio" name="response" value="3.30">
+                    <span class='w-20 p-2 rounded-lg border border-[#BC6C25] cursor-pointer'>3:30</span>
+                </label>
+                <label>
+                    <input class='hidden' type="radio" name="response" value=">4.00">
+                    <span class='w-20 p-2 rounded-lg border border-[#BC6C25] cursor-pointer'>≥ 4:00</span>
+                </label>
             </div>
 
-            <div class="flex justify-center mt-10">
+            <div class="flex justify-center">
                 <button
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                     Valider
                 </button>
             </div>
