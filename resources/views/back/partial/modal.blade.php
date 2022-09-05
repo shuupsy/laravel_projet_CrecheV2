@@ -1,7 +1,7 @@
 <div class="absolute flex justify-center items-center w-screen my-20 sizeIcon">
-    <!--modal heure-->
-    <div class="modalWindow hidden flex justify-center modalClock flex-col items-center text-center">
-        <h3 class='text-xl'>Horaire d'Arrivée / Sortie</h3>
+    <!--modal HORAIRE-->
+    <div class="modalWindow hidden flex justify-evenly flex-col items-center text-center">
+        <h3 class='text-xl font-black'>Horaire d'Arrivée / Sortie</h3>
 
         <span id="heureActuelle" class="my-4 border-2 px-5 py-1 border-double border-4 font-black border-stone-800 rounded-md"></span>
 
@@ -29,82 +29,88 @@
         <p class='text-xs'><span class='underline'>Guide:</span> Appuyez sur un des 2 boutons pour enregistrer
             automatiquement l'heure d'arrivée/sortie.</p>
     </div>
-    <!--modal Humeur-->
-    <div class="modalWindow hidden flex justify-center modalHumeur flex-col items-center">
-        <p class="text-3xl">Humeur en météo</p>
+
+    <!--modal HUMEUR-->
+    <div class="modalWindow hidden flex justify-evenly flex-col items-center modalHumeur ">
+        <h3 class="text-xl font-bold">Humeur en météo</h3>
+
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
             @csrf
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Humeur" name="activity">
-            <div class='flex mt-5'>
+            <div class='flex gap-5 my-8'>
                 {{-- COLERE --}}
                 <div class="flex flex-col items-center justify-center">
                     <label for="lightning">
-                        <img src="/assets/img/mood/lightning.png" alt="humeur colere eclairs">
+                        <img src="/assets/img/mood/lightning.png" alt="humeur colere eclairs" width='85px'>
                     </label>
-                    <input class="mt-5" type="radio" name='response' value="colere" id="lightning">
+                    <input class="mt-3" type="radio" name='response' value="colere" id="lightning">
                 </div>
 
                 {{-- TRISTE --}}
                 <div class="flex flex-col items-center justify-center">
                     <label for="rain">
-                        <img src="/assets/img/mood/water.png" alt="humeur triste pluie">
+                        <img src="/assets/img/mood/water.png" alt="humeur triste pluie" width='85px'>
                     </label>
-                    <input class="mt-5" type="radio" name='response' value="triste" id="rain">
+                    <input class="mt-3" type="radio" name='response' value="triste" id="rain">
                 </div>
 
                 {{-- AGITE --}}
                 <div class="flex flex-col items-center justify-center">
                     <label for="wind">
-                        <img src="/assets/img/mood/hurricane.png" alt="humeur agite tornade">
+                        <img src="/assets/img/mood/hurricane.png" alt="humeur agite tornade" width='85px'>
                     </label>
-                    <input class="mt-5" type="radio" name='response' value="agite" id="wind">
+                    <input class="mt-3" type="radio" name='response' value="agite" id="wind">
                 </div>
 
                 {{-- STRESS --}}
                 <div class="flex flex-col items-center justify-center">
                     <label for="cloud">
-                        <img src="/assets/img/mood/cloudsun.png" alt="humeur distrait stress nuage">
+                        <img src="/assets/img/mood/cloudsun.png" alt="humeur distrait stress nuage" width='85px'>
                     </label>
-                    <input class="mt-5" type="radio" name='response' value="distrait" id="cloud">
+                    <input class="mt-3" type="radio" name='response' value="distrait" id="cloud">
                 </div>
 
                 {{-- JOYEUX --}}
                 <div class="flex flex-col items-center justify-center">
                     <label for="sun">
-                        <img src="/assets/img/mood/sun.png" alt="humeur soleil">
+                        <img src="/assets/img/mood/sun.png" alt="humeur soleil" width='75px'>
                     </label>
-                    <input class="mt-5" type="radio" name='response' value="joyeux" id="sun">
+                    <input class="mt-3" type="radio" name='response' value="joyeux" id="sun">
                 </div>
 
             </div>
-            <div class="flex justify-center mt-10">
 
+            <div class="flex justify-center">
                 <button
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                     Valider
                 </button>
             </div>
 
         </form>
     </div>
-    <!--modal activité-->
-    <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
-        <p class="text-3xl">Activités</p>
-        <p class="mt-5">Description</p>
-        <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
+
+    <!--modal ACTIVITE-->
+    <div class="modalWindow hidden flex justify-center flex-col items-center" id='modal-activity'>
+        <p class="text-xl font-bold">Activité</p>
+
+        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col'>
             @csrf
+            <label class="mt-5">Description</label>
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="activité" name="activity">
-            <textarea class="m-5 areaShadow" name="response" cols="30" rows="10"></textarea>
-            <div>
+            <textarea class="shadow-lg drop-shadow-md rounded-lg mt-1 mb-5" name="response"></textarea>
+
+            <div class="flex justify-end">
                 <button
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                     Valider
                 </button>
             </div>
         </form>
     </div>
+
     <!--modal repas-->
     <div class="modalWindow hidden flex justify-center modalRepas flex-col items-center">
         <p class="text-3xl">Qualité du repas</p>
@@ -149,6 +155,7 @@
         </form>
 
     </div>
+
     <!--modal sommeil-->
     <div class="modalWindow hidden flex justify-center modalNuit flex-col items-center">
         <p class="text-3xl">Qualité du repas</p>
@@ -209,7 +216,7 @@
                 </button>
         </div>
     </div>
-    <!--modal diarrhé-->
+    <!--modal diarrhée-->
     <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
         <p>{{ $data->nom }} {{ $data->prenom }} a t'elle eu la diarrhé ?</p>
         <div class="mt-10">
@@ -239,30 +246,33 @@
                     </div>
 
                 </div>
-                <div class="flex justify-center">
 
+                <div class="flex justify-center">
                     <button
-                        class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                        class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                         Valider
                     </button>
                 </div>
+
             </form>
 
         </div>
     </div>
 
-    <!--modal blessure-->
-    <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
-        <p class="text-3xl">Blessures/soucis</p>
-        <p class="mt-5">Description</p>
-        <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
+    <!--modal BLESSURE-->
+    <div class="modalWindow hidden flex justify-center flex-col items-center" id='modal-blessure'>
+        <h3 class="text-xl font-bold">Blessure</h3>
+
+        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col'>
             @csrf
+            <label class="mt-5">Description</label>
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Accident" name="activity">
-            <textarea class="m-5 areaShadow" name="response" id="" cols="30" rows="10"></textarea>
-            <div>
+            <textarea class="shadow-lg drop-shadow-md rounded-lg mt-1 mb-5" name="response"></textarea>
+
+            <div class="flex justify-end">
                 <button
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                     Valider
                 </button>
             </div>

@@ -5,7 +5,7 @@ modalWindow = document.querySelectorAll('.modalWindow') // Toutes les modals
 panelBtn.forEach((button, index) => {
     button.addEventListener("click", () => { // au clic
 
-        if (button.classList.contains('panelActive')) { // Checker la condition pour fermer le modal
+        if (button.classList.contains('panelActive')) { // Checker la condition pour fermer le modal au 2ème clic
             button.classList.remove('panelActive');
             modalWindow[index].classList.add('hidden')
         }
