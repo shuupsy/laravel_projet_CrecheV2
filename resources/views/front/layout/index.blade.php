@@ -9,6 +9,7 @@
     {{-- Link CSS --}}
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/media.css">
+    <link rel="stylesheet" href="/assets/css/profilenfant.css">
     {{-- Link BoxIcons --}}
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>PARENT</title>
@@ -19,7 +20,7 @@
         @include('front.partial.nav')
     </header>
 
-    <main>
+    <main class="w-full">
         @yield('content')
     </main>
 
