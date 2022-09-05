@@ -9,66 +9,66 @@
     <hr class="my-8">
 
     {{-- Icones --}}
-    <div class="sizeIcon grid grid-cols-5 gap-8 px-24 mx-auto justify-center">
+    <div id='icones' class="sizeIcon px-2 md:px-10 mx-auto">
         {{-- Icone Heure --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="clock" class="h-28 w-28 my-4 "></div>
-            <div>Horaires</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="clock"><img src="/assets/img/clock.svg" alt="svg clock time"></div>
+            <p>Horaires</p>
         </div>
         {{-- Icone Humeur --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="humeur" class="h-28 w-28 my-4 "></div>
-            <div>Humeur</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="humeur" ><img src="/assets/img/baby.svg" alt="svg baby mood"></div>
+            <p>Humeur</p>
         </div>
         {{-- Icone Activité --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="activity" class="h-28 w-28 my-4 "></div>
-            <div>Activité</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div><img src="/assets/img/cubes.svg" alt="svg cubes activity"></div>
+            <p>Activité</p>
         </div>
         {{-- Icone Repas --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="repas"class="h-28 w-28 my-4 "></div>
-            <div>Repas</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="repas"> <img src="/assets/img/feeding-bottle.svg" alt="svg food feeding bottle milk"></div>
+            <p>Repas</p>
         </div>
         {{-- Icone Sommeil --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="sommeil"class="h-28 w-28 my-4 "></div>
-            <div>Sommeil</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div id="sommeil"><img src="/assets/img/zzz.svg" alt="svg sleep"> </div>
+            <p>Sommeil</p>
         </div>
         {{-- Icone Change --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="change"class="h-28 w-28 my-4 "></div>
-            <div>Change</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div><img src="/assets/img/diaper.svg" alt="svg diaper change"></div>
+            <p>Change</p>
         </div>
         {{-- Icone Diarrhée --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="diarrhe"class="h-28 w-28 my-4 "></div>
-            <div>Diarrhée</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div><img src="/assets/img/poo.svg" alt="svg poo diarrhea"></div>
+            <p>Diarrhée</p>
         </div>
         {{-- Icone Fièvre --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="fievre"class="h-28 w-28 my-4 "></div>
-            <div>Fièvre</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div><img src="/assets/img/thermometer.svg" alt="svg thermometer sick"></div>
+            <p>Fièvre</p>
         </div>
         {{-- Icone Blessure --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="blessure"class="h-28 w-28 my-4 "></div>
-            <div>Blessure</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div><img src="/assets/img/first-aid-kit.svg" alt="svg accident first aid kit"></div>
+            <p>Blessure</p>
         </div>
         {{-- Icone Santé --}}
         <div
-            class="panelBtn flex items-center flex-col shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
-            <div id="sante"class="h-28 w-28 my-4 "></div>
-            <div>Santé</div>
+            class="panelBtn flex flex-col justify-evenly items-center gap-2 py-2 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
+            <div><img src="/assets/img/medical.svg" alt="svg allergy medical"></div>
+            <p>Santé</p>
         </div>
     </div>
 

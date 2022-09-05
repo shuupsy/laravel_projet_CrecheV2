@@ -26,11 +26,23 @@ body {
     display: none;
 }
 
-
 /* Panel (NURSE) */
+#icones {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+#icones img {
+    width: 100%;
+    object-fit: cover;
+}
+
 .panelActive{
     background-color: #8EC9C1;
 }
+
 
 .modalWindow {
     width: 600px;

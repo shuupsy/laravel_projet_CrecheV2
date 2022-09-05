@@ -23,3 +23,10 @@
     }
 }
 
+@media screen and (max-width:768px) {
+    #icones {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+

@@ -9,46 +9,6 @@
     background-position: center;
     background-size: cover;
 }
-#clock{
-    background-image: url("../../public/assets/img/clock.svg");
-    background-size: cover;
-}
-#humeur{
-    background-image: url("../../public/assets/img/baby.svg");
-    background-size: cover;
-}
-#activity{
-    background-image: url("../../public/assets/img/cubes.svg");
-    background-size: cover;
-}
-#repas{
-    background-image: url("../../public/assets/img/feeding-bottle.svg");
-    background-size: cover;
-}
-#sommeil{
-    background-image: url("../../public/assets/img/zzz.svg");
-    background-size: cover;
-}
-#change{
-    background-image: url("../../public/assets/img/diaper.svg");
-    background-size: cover;
-}
-#diarrhe{
-    background-image: url("../../public/assets/img/poo.svg");
-    background-size: cover;
-}
-#fievre{
-    background-image: url("../../public/assets/img/thermometer.svg");
-    background-size: cover;
-}
-#blessure{
-    background-image: url("../../public/assets/img/first-aid-kit.svg");
-    background-size: cover;
-}
-#sante{
-    background-image: url("../../public/assets/img/medical.svg");
-    background-size: cover;
-}
 .sizeIcon{
     width: calc(100vw - 256px);
 }
