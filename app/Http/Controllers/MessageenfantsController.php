@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Connexion;
-use App\Models\Frontaccueil;
-use App\Http\Requests\StoreFrontaccueilRequest;
-use App\Http\Requests\UpdateFrontaccueilRequest;
+use App\Http\Requests\StoreMessageenfantsRequest;
+use App\Http\Requests\UpdateMessageenfantsRequest;
+use App\Models\Messageenfants;
 
-class FrontaccueilController extends Controller
+class MessageenfantsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,7 @@ class FrontaccueilController extends Controller
      */
     public function index()
     {
-        $data = Frontaccueil::all();
-        return view("front.pages.journal",compact("data"));
+        return view("front.pages.messagerie");
     }
 
     /**
@@ -33,10 +31,10 @@ class FrontaccueilController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreFrontaccueilRequest  $request
+     * @param  \App\Http\Requests\StoreMessageenfantsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFrontaccueilRequest $request)
+    public function store(StoreMessageenfantsRequest $request)
     {
         //
     }
@@ -44,10 +42,10 @@ class FrontaccueilController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Frontaccueil  $frontaccueil
+     * @param  \App\Models\Messageenfants  $messageenfants
      * @return \Illuminate\Http\Response
      */
-    public function show(Frontaccueil $frontaccueil)
+    public function show(Messageenfants $messageenfants)
     {
         //
     }
@@ -55,10 +53,10 @@ class FrontaccueilController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Frontaccueil  $frontaccueil
+     * @param  \App\Models\Messageenfants  $messageenfants
      * @return \Illuminate\Http\Response
      */
-    public function edit(Frontaccueil $frontaccueil)
+    public function edit(Messageenfants $messageenfants)
     {
         //
     }
@@ -66,11 +64,11 @@ class FrontaccueilController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateFrontaccueilRequest  $request
-     * @param  \App\Models\Frontaccueil  $frontaccueil
+     * @param  \App\Http\Requests\UpdateMessageenfantsRequest  $request
+     * @param  \App\Models\Messageenfants  $messageenfants
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFrontaccueilRequest $request, Frontaccueil $frontaccueil)
+    public function update(UpdateMessageenfantsRequest $request, Messageenfants $messageenfants)
     {
         //
     }
@@ -78,10 +76,10 @@ class FrontaccueilController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Frontaccueil  $frontaccueil
+     * @param  \App\Models\Messageenfants  $messageenfants
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Frontaccueil $frontaccueil)
+    public function destroy(Messageenfants $messageenfants)
     {
         //
     }

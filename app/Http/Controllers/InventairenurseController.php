@@ -93,4 +93,13 @@ class InventairenurseController extends Controller
 
     }
 
+    public function diminuer($id){
+        $product = Inventairenurse::find($id);
+        $product->quantity -= 1;
+        // dd($product->quantity);
+        $product->save();
+        return redirect()->back();
+
+    }
+
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessageenfantsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Profilenfant;
 use App\Http\Controllers\PanelIndividuel;
@@ -27,6 +28,7 @@ Route::post('backend/{id}/panel/activity',[PanelIndividuel::class,"activity"]);
 //backend inventaire
 Route::get('/backend/inventaire',[InventairenurseController::class,"index"])->name("backInventaire");
 Route::patch('/backend/inventaire/ajouter/{id}',[InventairenurseController::class,"ajouter"]);
+Route::patch('/backend/inventaire/diminuer/{id}',[InventairenurseController::class,"diminuer"]);
 
 //backend calendrier
 Route::get('/backend/calendrier',[CalendriernurseController::class,"index"])->name("backCalendrier");
@@ -43,3 +45,5 @@ Route::get('/frontend/inventaire',[InventaireparentsController::class,"index"])-
 
 //frontend profilEnfant
 Route::get('/frontend/profil',[Profilenfant::class,"index"])->name("frontProfil");
+//frontend messagerie
+Route::get('/frontend/messagerie',[MessageenfantsController::class,"index"])->name("frontMessagerie");
