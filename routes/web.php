@@ -18,7 +18,8 @@ Route::post('/connexion',[ConnexionController::class,"store"]);
 
 //backend accueil
 Route::get('/backend/nurseAccueil',[BackaccueilController::class,"index"])->name("backAccueil");
-Route::post('/backend/{id}/panel',[PanelIndividuel::class,"index"])->name("backIndividuel");
+
+Route::get('/backend/{id}/panel',[PanelIndividuel::class,"index"])->name("backIndividuel");
 
 //backend panel
 Route::post('backend/{id}/panel/activity',[PanelIndividuel::class,"activity"]);
