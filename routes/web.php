@@ -27,6 +27,7 @@ Route::post('backend/{id}/panel/activity',[PanelIndividuel::class,"activity"]);
 //backend inventaire
 Route::get('/backend/inventaire',[InventairenurseController::class,"index"])->name("backInventaire");
 Route::patch('/backend/inventaire/ajouter/{id}',[InventairenurseController::class,"ajouter"]);
+Route::patch('/backend/inventaire/diminuer/{id}',[InventairenurseController::class,"diminuer"]);
 
 //backend calendrier
 Route::get('/backend/calendrier',[CalendriernurseController::class,"index"])->name("backCalendrier");
