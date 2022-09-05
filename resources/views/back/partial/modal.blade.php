@@ -3,7 +3,8 @@
     <div class="modalWindow hidden flex justify-evenly flex-col items-center text-center">
         <h3 class='text-2xl font-black'>Horaire d'Arrivée / Sortie</h3>
 
-        <span id="heureActuelle" class="my-4 border-2 px-5 py-1 border-double border-4 font-black border-stone-800 rounded-md"></span>
+        <span id="heureActuelle"
+            class="my-4 border-2 px-5 py-1 border-double border-4 font-black border-stone-800 rounded-md"></span>
 
         <div class='flex gap-6 text-center'>
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -113,7 +114,7 @@
 
     <!--modal REPAS-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
-        <h3 class="text-2xl font-bold">Comment {{ $data -> prenom }} a mangé ?</h3>
+        <h3 class="text-2xl font-bold">Comment {{ $data->prenom }} a mangé ?</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
             @csrf
@@ -215,20 +216,25 @@
         </form>
 
     </div>
-    <!--modal change-->
+
+    <!--modal CHANGE-->
     <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
-        <p>la change de {{ $data->nom }} {{ $data->prenom }} a t'elle été effectué ?</p>
-        <div class="mt-10">
+        <h3 class='text-2xl font-bold'>La change de {{ $data->prenom }} a été effectuée ?</h3>
+
+        <div class="my-4">
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
                 @csrf
                 <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
                 <input class="hidden" type="text" value="Change" name="activity">
-                <button name="response" value="{{ $data->nom }} {{ $data->prenom }} a été changé !"
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    Valider
+
+                <button type="submit" name="response" value="{{ $data->nom }} {{ $data->prenom }} a été changé !"
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    Oui
                 </button>
+            </form>
         </div>
     </div>
+    
     <!--modal diarrhée-->
     <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
         <p>{{ $data->nom }} {{ $data->prenom }} a t'elle eu la diarrhé ?</p>
