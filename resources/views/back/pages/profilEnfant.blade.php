@@ -1,8 +1,11 @@
 @extends('back.layout.index')
+
 @section('content')
+    {{-- Header --}}
     <div class="text-center text-5xl my-10">
         <h1>Baby'zou</h1>
     </div>
+
     <hr class="my-8">
     <div class="sizeIcon flex flex-wrap justify-center">
 
@@ -203,7 +206,7 @@
                 @csrf
                 <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
                 <input class="hidden" type="text" value="Sieste" name="activity">
-                 <div class='flex mt-10'>
+                <div class='flex mt-10'>
                     <div class="flex flex-col justify-center mx-3 text-xl">
                         <label class="my-2" for="moins1">
                             <span>
@@ -250,10 +253,10 @@
                     @csrf
                     <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
                     <input class="hidden" type="text" value="Change" name="activity">
-                <button name="response" value="{{$data->nom}} {{$data->prenom}} a été changé !"
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    Valider
-                </button>
+                    <button name="response" value="{{ $data->nom }} {{ $data->prenom }} a été changé !"
+                        class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                        Valider
+                    </button>
             </div>
         </div>
         <!--modal diarrhé-->
@@ -264,10 +267,10 @@
                     @csrf
                     <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
                     <input class="hidden" type="text" value="Diarrhé" name="activity">
-                <button name="response" value="{{ $data->nom }} {{ $data->prenom }} à eu la diarrhé"
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    Valider
-                </button>
+                    <button name="response" value="{{ $data->nom }} {{ $data->prenom }} à eu la diarrhé"
+                        class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                        Valider
+                    </button>
             </div>
         </div>
         <!--modal fievre-->
@@ -306,14 +309,14 @@
                 @csrf
                 <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
                 <input class="hidden" type="text" value="Accident" name="activity">
-            <textarea class="m-5 areaShadow" name="response" id="" cols="30" rows="10"></textarea>
-            <div>
-                <button
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    Valider
-                </button>
-            </div>
-        </form>
+                <textarea class="m-5 areaShadow" name="response" id="" cols="30" rows="10"></textarea>
+                <div>
+                    <button
+                        class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                        Valider
+                    </button>
+                </div>
+            </form>
         </div>
         <!--modal santé-->
         <div id="modalSante" class="hidden flex justify-center modalActivite flex-col items-center">
@@ -323,15 +326,15 @@
                 @csrf
                 <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
                 <input class="hidden" type="text" value="Sante" name="activity">
-            <textarea class="m-5 areaShadow" name="response" id="" cols="30" rows="10"></textarea>
+                <textarea class="m-5 areaShadow" name="response" id="" cols="30" rows="10"></textarea>
 
-            <div>
-                <button
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    Valider
-                </button>
-            </div>
-        </form>
+                <div>
+                    <button
+                        class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                        Valider
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 @endsection

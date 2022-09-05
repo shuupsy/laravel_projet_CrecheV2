@@ -15,11 +15,10 @@
             </div>
 
             {{-- Liste d'enfants --}}
-            {{-- <div class="grid grid-cols-1 gap-4 mt-8 xl:mt-10 md:grid-cols-2 xl:grid-cols-4"> --}}
-                <div class="grid grid-cols-1 gap-2 mt-8 xl:mt-10 md:grid-cols-2 xl:grid-cols-4">
+            <div class="grid grid-cols-1 gap-2 mt-8 xl:mt-10 md:grid-cols-2 xl:grid-cols-4">
 
                 @foreach ($data as $item)
-                    <form action="{{$item->id}}/panel" method="POST">
+                    <form action="{{ $item->id }}/panel" method="POST">
                         @csrf
 
                         {{-- Structure CARD --}}
@@ -40,7 +39,8 @@
                                         ans
                                     @else
                                         an
-                                    @endif</p>
+                                    @endif
+                                </p>
 
                             </div>
                         </button>
@@ -50,5 +50,4 @@
             </div>
         </div>
     </section>
-
 @endsection
