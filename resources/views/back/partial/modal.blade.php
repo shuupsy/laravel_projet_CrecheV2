@@ -218,34 +218,34 @@
     </div>
 
     <!--modal CHANGE-->
-    <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
+    <div class="modalWindow hidden flex justify-center flex-col items-center">
         <h3 class='text-2xl font-bold'>La change de {{ $data->prenom }} a été effectuée ?</h3>
 
-        <div class="my-4">
+        <div class="my-5">
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
                 @csrf
                 <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
                 <input class="hidden" type="text" value="Change" name="activity">
 
-                <button type="submit" name="response" value="{{ $data->nom }} {{ $data->prenom }} a été changé !"
-                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                <button type="submit" name="response" value="{{ $data->nom }} {{ $data->prenom }} a été changé !" class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                     Oui
                 </button>
             </form>
         </div>
     </div>
-    
-    <!--modal diarrhée-->
-    <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
-        <p>{{ $data->nom }} {{ $data->prenom }} a t'elle eu la diarrhé ?</p>
-        <div class="mt-10">
+
+    <!--modal DIARRHEE-->
+    <div class="modalWindow hidden flex justify-center flex-col items-center">
+        <h3 class='text-2xl font-bold'>{{ $data->prenom }} a eu la diarrhée ?</h3>
+
+        <div class="my-5">
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
                 @csrf
                 <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
-                <input class="hidden" type="text" value="Diarrhé" name="activity">
-                <button name="response" value="{{ $data->nom }} {{ $data->prenom }} à eu la diarrhé"
-                    class="px-6 py-2 w-24 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    Valider
+                <input class="hidden" type="text" value="Diarrhée" name="activity">
+
+                <button type="submit" name="response" value="{{ $data->nom }} {{ $data->prenom }} a eu la diarrhée." class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    Oui
                 </button>
         </div>
     </div>
