@@ -14,16 +14,14 @@
     <title>PARENT</title>
 </head>
 
-<body>
-    <div class="flex">
-        <header>
-            @include('front.partial.nav')
-        </header>
+<body class="flex">
+    <header>
+        @include('front.partial.nav')
+    </header>
 
-        <main>
-            @yield('content')
-        </main>
-    </div>
+    <main>
+        @yield('content')
+    </main>
 
     {{-- Link JS --}}
     <script src="/assets/js/modal.js"></script>
