@@ -8,7 +8,7 @@
     @endforeach
     @foreach ($messages as $item)
         <div id="messageInd" class="hidden affichageBox" value="{{$item->frontaccueil_id}}">
-                {{ $item->message }} {{ $item->id }}
+                {{ $item->message }}
         </div>
     @endforeach
 </div>

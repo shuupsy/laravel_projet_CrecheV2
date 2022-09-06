@@ -124,6 +124,7 @@
     width: 50px;
     border-radius: 50%;
     background-color: blue;
+    transition: background-color 500ms;
 }
 .btnMessagerieBackOpen:hover{
     background-color: blueviolet;
@@ -135,7 +136,9 @@
     height: 550px;
     width: 350px;
     border-radius: 10px;
-    background-color: rgb(78, 78, 128);
+    background-color: #fff;
+    border: 1px solid grey;
+    padding: 2rem;
 }
 .choixUsersMessagerie{
     width: fit-content;
