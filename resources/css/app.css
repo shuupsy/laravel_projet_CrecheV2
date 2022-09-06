@@ -167,7 +167,18 @@
     }
 
     .teamMessagerie{
-        left: -8rem;
-        top: -1rem;
+        left: -8.5rem;
+        top: 0rem;
     }
+
+    .imageTeam{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .imgTeam{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
 }
