@@ -30,10 +30,10 @@
             @csrf
             <div class="maskMessage flex justify-center items-center">
                 <div class="flex sizeIcon justify-center items-center">
-                    <div class="boxMessage">
-                        <div onclick="closeMessage()" class="h-10 w-10 bg-zinc-300">X</div>
-                        <textarea name="message" cols="30" rows="10">ici txt</textarea>
-                        <button type="submit">envoi</button>
+                    <div class="boxMessage flex flex-col items-center justify-center rounded gap-2 relative">
+                        <div onclick="closeMessage()" class="h-10 w-10 flex justify-center items-center bg-gray-600 text-white rounded-br-lg absolute top-0 left-0">X</div>
+                        <textarea class="bg-red-300 p-4 w-5/6 rounded-lg" name="message" cols="30" rows="10">Veuillez entrer votre message.</textarea>
+                        <button class="bg-red-500 p-2 rounded-lg w-5/6" type="submit">envoi</button>
                     </div>
                 </div>
             </div>
