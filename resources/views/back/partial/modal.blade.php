@@ -328,11 +328,14 @@
     </div>
 
     <!--modal SANTE-->
-    <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
+    <div class="modalWindow hidden flex justify-center flex-col items-center">
 
         @include('back.partial.modal-closebtn')
 
-        <h3 class="text-3xl">EN COURS</h3>
+        <h3 class="text-3xl">Informations générales</h3>
 
+        <div>
+            {{ $enfants -> allergy }}
+        </div>
     </div>
 </div>
