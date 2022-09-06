@@ -6,8 +6,8 @@
     .burger {
         display: block;
         position: fixed;
-        top: 15px;
-        right: 15px;
+        top: 10px;
+        right: 10px;
         z-index: 9999;
     }
 
@@ -23,6 +23,7 @@
     .sidebar.open {
         left: 0;
         position: fixed;
+        height: 100%;
     }
 }
 

@@ -1,28 +1,30 @@
 @extends('back.layout.index')
 
 @section('content')
-    <section class="sizeIcon bg-white dark:bg-gray-900">
+    <section class="bg-white dark:bg-gray-900">
 
-            {{-- Titre --}}
-            <div>
-                <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Enfants
+            {{-- Headers --}}
+            <div class='headers flex flex-col justify-center items-center'>
+                <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Enfants
                     inscrits</h1>
 
-                <p class="my-3 text-center text-gray-500 dark:text-gray-300">
+                <p class="text-gray-500 dark:text-gray-300">
                     Section: Bébé, Moyen, Grand
                 </p>
             </div>
 
+            <hr>
+
             {{-- Liste d'enfants --}}
-            <div class="grid grid-cols-1 gap-2 mt-8 xl:mt-10 md:grid-cols-2 xl:grid-cols-4">
+            <div class="contenu" id='liste-bebe'>
 
                 @foreach ($data as $item)
                     {{-- Structure CARD --}}
                     <a href='/backend/{{ $item->id }}/panel'>
                         <div
-                            class="w-64 flex flex-col gap-1.5 items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-[#bc6c25] dark:border-gray-700 dark:hover:border-transparent">
+                            class="card-baby flex flex-col gap-2 items-center p-4 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-[#bc6c25] dark:border-gray-700 dark:hover:border-transparent">
 
-                            <div>
+                            <div class='w-32 h-32'>
                                 <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
                                     src="/assets/img/{{ $item->img }}" alt="">
                             </div>

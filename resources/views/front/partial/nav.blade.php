@@ -65,11 +65,11 @@
         </nav>
 
         {{-- Compte --}}
-        <div class="flex items-center px-4 -mx-2">
-            <img class="object-cover mx-2 rounded-full h-9 w-9"
+        <div class="flex items-center gap-2 px-2 my-2">
+            <img class="object-cover rounded-full h-9 w-9"
                 src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
                 alt="avatar" />
-            <h4 class="mx-2 font-medium text-gray-800 dark:text-gray-200 hover:underline">Compte parents</h4>
+            <h4 class="font-medium text-gray-800 dark:text-gray-200 hover:underline">Compte parents</h4>
         </div>
     </div>
 </div>

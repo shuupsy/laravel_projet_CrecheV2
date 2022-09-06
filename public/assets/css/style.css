@@ -13,7 +13,8 @@
 }
 
 body {
-    display: flex;
+    display: grid;
+    grid-template-columns: 16rem 1fr;
 }
 
 .sidebar { /* Navbar */
@@ -24,6 +25,33 @@ body {
 
 .burger { /* Menu burger */
     display: none;
+}
+
+/* Headers */
+.headers {
+    width: 100%;
+    height: 8rem;
+}
+
+/* Contenu */
+.contenu {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+/* Section (NURSE) - liste bébé */
+#liste-bebe {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+/* Section (NURSE) - card-baby */
+
+.card-baby img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* Panel (NURSE) */

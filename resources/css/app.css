@@ -5,12 +5,9 @@
 
 /*ICON ACCUEIL NURSES*/
 .connexionBg{
-    background-image: url("../../public/assets/img/photo-1555252333-9f8e92e65df9.avif");
+    background-image: url("../../public/assets/img/team/photo-1555252333-9f8e92e65df9.avif");
     background-position: center;
     background-size: cover;
-}
-.sizeIcon{
-    width: calc(100vw - 256px);
 }
 
 /*profil*/
