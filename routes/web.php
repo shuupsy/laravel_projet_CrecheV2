@@ -6,6 +6,7 @@ use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\BackaccueilController;
 use App\Http\Controllers\FrontaccueilController;
 use App\Http\Controllers\ProfilenfantController;
+use App\Http\Controllers\AdministrationController;
 use App\Http\Controllers\MessageenfantsController;
 use App\Http\Controllers\CalendriernurseController;
 use App\Http\Controllers\InventairenurseController;
@@ -48,3 +49,5 @@ Route::get('/frontend/profil',[ProfilenfantController::class,"index"])->name("fr
 //frontend messagerie
 Route::get('/frontend/messagerie',[MessageenfantsController::class,"index"])->name("frontMessagerie");
 Route::post("/frontend/messagerie/envoi/{id}",[MessageenfantsController::class,"store"]);
+//frontend administration
+Route::get('/frontend/administration',[AdministrationController::class,"index"])->name("frontAdministration");
