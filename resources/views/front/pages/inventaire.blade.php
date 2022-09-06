@@ -1,7 +1,11 @@
 @extends('front.layout.index')
 @section('content')
-    <div class="gap-16 sizeIcon flex justify-center items-center h-screen">
-        <div class="grid lg:grid-cols-3 gap-16 sm:grid sm:grid-cols-1">
+{{-- Header --}}
+<div class='headers flex flex-col justify-center items-start xl:items-center px-6'>
+    <h1 class="text-3xl font-semibold text-gray-800 lg:text-4xl dark:text-white">Inventaire</h1>
+</div>
+
+        <div class="contenu grid lg:grid-cols-3 gap-16 sm:grid sm:grid-cols-1">
         @foreach ($inventaire as $item)
             <div class="w-80 flex flex-col items-center gap-2 bg-white drop-shadow-md rounded-lg p-4">
                 <div class="w-16 h-12">
@@ -12,5 +16,5 @@
             </div>
         @endforeach
         </div>
-    </div>
+
 @endsection
