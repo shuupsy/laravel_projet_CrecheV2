@@ -20,7 +20,7 @@
         @include('front.partial.nav')
     </header>
 
-    <main class="w-full">
+    <main>
         @yield('content')
     </main>
 
