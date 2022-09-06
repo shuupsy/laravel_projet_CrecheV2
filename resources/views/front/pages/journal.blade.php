@@ -1,12 +1,12 @@
 @extends('front.layout.index')
 @section('content')
-    <section class="bg-white dark:bg-gray-900 flex justify-center items-center sizeIcon h-screen">
-        <div class="container px-6 py-10 mx-auto">
-            <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Notre équipe</h1>
+{{-- Headers --}}
+<div class='headers flex flex-col justify-center items-start xl:items-center px-6'>
+    <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Notre équipe</h1>
 
-            <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-                Notre équipe de puéricultrices motivé.es
-            </p>
+    <p class="text-gray-500 dark:text-gray-300 font-thin">Notre équipe de puéricultrices motivé.es</p>
+  </div>
+    <section class="bg-white dark:bg-gray-900 contenu">
 
             <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
                 @foreach ($data as $item)
@@ -23,11 +23,10 @@
                     </div>
                 @endforeach
             </div>
-        </div>
         <form id="postForm" class="hidden" method="POST">
             @csrf
             <div class="maskMessage flex justify-center items-center">
-                <div class="flex sizeIcon justify-center items-center">
+                <div class="flex contenu justify-center items-center">
                     <div class="boxMessage flex flex-col items-center justify-center rounded gap-2 relative">
                         <div onclick="closeMessage()" class="h-10 w-10 flex justify-center items-center bg-gray-400 text-white rounded-br-lg absolute top-0 left-0">X</div>
                         <textarea class="p-4 w-5/6 bg-slate-50 rounded-lg border border-grey-300" name="message" cols="30" rows="10" placeholder="Veuillez entrer votre message."></textarea>
