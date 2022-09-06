@@ -105,7 +105,7 @@
 
         <h3 class="text-2xl font-bold">Activité</h3>
 
-        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col'>
+        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col w-11/12 mx-auto'>
             @csrf
             <label class="mt-5">Description</label>
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
@@ -132,27 +132,27 @@
             @csrf
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Repas" name="activity">
-            <div class='flex gap-6 my-8'>
-                <div class="flex flex-col justify-center mx-3 text-xl">
+            <div class='md:flex gap-6 my-8'>
+                <div class="md:flex flex-col justify-center mx-3 text-xl">
                     <label class="my-2" for="rien">
                         Pas bien
                     </label>
                     <input type="radio" name="response" value="rien mangé" id="rien">
                 </div>
 
-                <div class="flex flex-col justify-center mx-3 text-xl">
+                <div class="md:flex flex-col justify-center mx-3 text-xl">
                     <label class="my-2" for="pasbien">
                         Moyen
                     </label>
                     <input type="radio" name="response" value="pas beaucoup mangé" id="pasbien">
                 </div>
-                <div class="flex flex-col justify-center mx-3 text-xl">
+                <div class="md:flex flex-col justify-center mx-3 text-xl">
                     <label class="my-2" for="bien">
                         Bien
                     </label>
                     <input type="radio" name="response" value="assez bien mangé" id="bien">
                 </div>
-                <div class="flex flex-col justify-center mx-3 text-xl">
+                <div class="md:flex flex-col justify-center mx-3 text-xl">
                     <label class="my-2" for="tresbien">
                         Très bien
                     </label>
@@ -237,7 +237,7 @@
 
         @include('back.partial.modal-closebtn')
 
-        <h3 class='text-2xl font-bold'>La change de {{ $data->prenom }} a été effectuée ?</h3>
+        <h3 class='text-2xl font-bold text-center'>La change de {{ $data->prenom }} a été effectuée ?</h3>
 
         <div class="my-5">
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -259,7 +259,7 @@
 
         @include('back.partial.modal-closebtn')
 
-        <h3 class='text-2xl font-bold'>{{ $data->prenom }} a eu la diarrhée ?</h3>
+        <h3 class='text-2xl font-bold text-center'>{{ $data->prenom }} a eu la diarrhée ?</h3>
 
         <div class="my-5">
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -311,7 +311,7 @@
 
         <h3 class="text-xl font-bold">Blessure</h3>
 
-        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col'>
+        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col w-11/12 mx-auto'>
             @csrf
             <label class="mt-5">Description</label>
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">

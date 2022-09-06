@@ -52,8 +52,7 @@ body {
 }
 
 #modal-activity textarea, #modal-blessure textarea{
-    width: 500px;
-    height: 150px;
+    height: 175px;
     padding: 15px;
 }
 
