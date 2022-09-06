@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Frontaccueil;
+use App\Models\Messageenfants;
+use App\Models\Inventairenurse;
 use App\Http\Requests\StoreinventaireNurseRequest;
 use App\Http\Requests\UpdateinventaireNurseRequest;
-use App\Models\Inventairenurse;
 
 class InventairenurseController extends Controller
 {
@@ -16,7 +18,9 @@ class InventairenurseController extends Controller
     public function index()
     {
         $inventaire = Inventairenurse::all();
-        return view("back.pages.inventaire",compact("inventaire"));
+        $messages = Messageenfants::all();
+        $nurses = Frontaccueil::all();
+        return view("back.pages.inventaire",compact("inventaire","messages","nurses"));
     }
 
     /**

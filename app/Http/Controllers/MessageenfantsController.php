@@ -34,9 +34,13 @@ class MessageenfantsController extends Controller
      * @param  \App\Http\Requests\StoreMessageenfantsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreMessageenfantsRequest $request)
+    public function store(StoreMessageenfantsRequest $request, $id)
     {
-        //
+        $data = new Messageenfants;
+        $data->message = $request->message;
+        $data->frontaccueil_id = $id;
+        $data->save();
+        return redirect()->back();
     }
 
     /**

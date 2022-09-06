@@ -42,3 +42,5 @@ rangeSlider.addEventListener("input", showSliderValue, false);
 function showSliderValue() {
     rangeBullet.innerHTML = rangeSlider.value + '°C';
 }
+
+

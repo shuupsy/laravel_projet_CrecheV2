@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\MessageenfantsController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Profilenfant;
 use App\Http\Controllers\PanelIndividuel;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\BackaccueilController;
 use App\Http\Controllers\FrontaccueilController;
+use App\Http\Controllers\ProfilenfantController;
+use App\Http\Controllers\MessageenfantsController;
 use App\Http\Controllers\CalendriernurseController;
 use App\Http\Controllers\InventairenurseController;
 use App\Http\Controllers\CalendrierparentsController;
@@ -44,6 +44,7 @@ Route::get('/frontend/calendrier',[CalendrierparentsController::class,"index"])-
 Route::get('/frontend/inventaire',[InventaireparentsController::class,"index"])->name("frontInventaire");
 
 //frontend profilEnfant
-Route::get('/frontend/profil',[Profilenfant::class,"index"])->name("frontProfil");
+Route::get('/frontend/profil',[ProfilenfantController::class,"index"])->name("frontProfil");
 //frontend messagerie
 Route::get('/frontend/messagerie',[MessageenfantsController::class,"index"])->name("frontMessagerie");
+Route::post("/frontend/messagerie/envoi/{id}",[MessageenfantsController::class,"store"]);

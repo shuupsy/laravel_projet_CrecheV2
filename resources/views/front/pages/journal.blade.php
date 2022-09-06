@@ -12,19 +12,43 @@
 
             <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
                 @foreach ($data as $item)
-                <div
-                    class="flex flex-col items-center p-8 transition-colors duration-300 transform cursor-pointer group hover:bg-[#8EC9C1] rounded-xl">
-                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
-                        src="{{$item->img}}"
-                        alt="">
+                    <div onclick="ouvertureMessage({{ $item->id }})"
+                        class="flex flex-col items-center p-8 transition-colors duration-300 transform cursor-pointer group hover:bg-[#8EC9C1] rounded-xl">
+                        <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="{{ $item->img }}"
+                            alt="">
+                        <h1
+                            class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                            {{ $item->nom }} {{ $item->prenom }}</h1>
 
-                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
-                        {{$item->nom}} {{$item->prenom}}</h1>
-
-                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">{{$item->poste}}</p>
-                </div>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+                            {{ $item->poste }}</p>
+                    </div>
                 @endforeach
             </div>
         </div>
+        <form id="postForm" class="hidden" method="POST">
+            @csrf
+            <div class="maskMessage flex justify-center items-center">
+                <div class="flex sizeIcon justify-center items-center">
+                    <div class="boxMessage">
+                        <div onclick="closeMessage()" class="h-10 w-10 bg-zinc-300">X</div>
+                        <textarea name="message" cols="30" rows="10">ici txt</textarea>
+                        <button type="submit">envoi</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </section>
+    <script>
+        function ouvertureMessage(x) {
+            let formAffichage = document.getElementById("postForm")
+            formAffichage.setAttribute("action", `/frontend/messagerie/envoi/${x}`)
+            formAffichage.classList.remove("hidden")
+        }
+        function closeMessage() {
+            let formAffichage = document.getElementById("postForm")
+            formAffichage.removeAttribute("action")
+            formAffichage.classList.add("hidden")
+        }
+    </script>
 @endsection
