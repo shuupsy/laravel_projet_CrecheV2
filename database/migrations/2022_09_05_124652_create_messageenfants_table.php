@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('messageenfants', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("frontaccueil_id")->constrained();
+            $table->string("message");
             $table->timestamps();
         });
     }

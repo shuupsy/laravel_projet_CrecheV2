@@ -23,7 +23,7 @@
     <main>
         @yield('content')
     </main>
-
+    @include("back.partial.modalMessage")
     {{-- Link JS --}}
     <script src="/assets/js/panel.js"></script>
 </body>

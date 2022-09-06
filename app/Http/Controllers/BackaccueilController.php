@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Backaccueil;
+use App\Models\Frontaccueil;
+use App\Models\Messageenfants;
 use App\Http\Requests\StoreBackaccueilRequest;
 use App\Http\Requests\UpdateBackaccueilRequest;
-use App\Models\Backaccueil;
 
 class BackaccueilController extends Controller
 {
@@ -16,7 +18,9 @@ class BackaccueilController extends Controller
     public function index()
     {
         $data = Backaccueil::all();
-        return view("back.pages.section",compact("data"));
+        $messages = Messageenfants::all();
+        $nurses = Frontaccueil::all();
+        return view("back.pages.section",compact("data","messages","nurses"));
     }
 
     /**
