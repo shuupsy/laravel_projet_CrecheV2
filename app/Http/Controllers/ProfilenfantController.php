@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Backaccueil;
+use App\Models\Profilenfant;
 use App\Http\Requests\StoreProfilenfantRequest;
 use App\Http\Requests\UpdateProfilenfantRequest;
-use App\Models\Profilenfant;
 
 class ProfilenfantController extends Controller
 {
@@ -15,7 +16,9 @@ class ProfilenfantController extends Controller
      */
     public function index()
     {
-        return view("front.pages.profil");
+        $nom = Backaccueil::find(1);
+        $enfants = Profilenfant::find(1);
+        return view("front.pages.profil", compact('enfants', 'nom'));
     }
 
     /**
