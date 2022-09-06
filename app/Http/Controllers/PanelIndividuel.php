@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Backaccueil;
 use App\Models\Frontaccueil;
+use App\Models\Profilenfant;
 use Illuminate\Http\Request;
 use App\Models\Journalparents;
 use App\Models\Messageenfants;
@@ -15,7 +16,8 @@ class PanelIndividuel extends Controller
         $messages = Messageenfants::all();
         $data = Backaccueil::find($id);
         $nurses = Frontaccueil::all();
-        return view("back.pages.panel", compact("data","messages","nurses"));
+        $enfants = Profilenfant::find($id);
+        return view("back.pages.panel", compact("data","messages","nurses", "enfants"));
     }
     public function activity(Request $request, $id)
     {
