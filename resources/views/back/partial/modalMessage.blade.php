@@ -15,7 +15,7 @@
             </div>
         @endforeach
     </div>
-    <div class="flex flex-col gap-2 overflow-auto">
+    <div class="flex flex-col gap-2 h-full overflow-auto">
         @foreach ($messages as $item)
             <div id="messageInd" class="hidden affichageBox shadow-md" value="{{ $item->frontaccueil_id }}">
                 {{ $item->message }}
