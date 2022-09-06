@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Backaccueil;
+use App\Models\Profilenfant;
 use App\Models\Administration;
 use App\Http\Requests\StoreAdministrationRequest;
 use App\Http\Requests\UpdateAdministrationRequest;
@@ -16,9 +17,7 @@ class AdministrationController extends Controller
      */
     public function index()
     {
-        $enfants = Backaccueil::find(1);
-        $data = Profilenfants::find(1);
-        return view("front.pages.administration","enfants");
+        return view("front.pages.administration");
     }
 
     /**

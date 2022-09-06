@@ -49,13 +49,6 @@ Route::get('/frontend/profil',[ProfilenfantController::class,"index"])->name("fr
 //frontend messagerie
 Route::get('/frontend/messagerie',[MessageenfantsController::class,"index"])->name("frontMessagerie");
 Route::post("/frontend/messagerie/envoi/{id}",[MessageenfantsController::class,"store"]);
-<<<<<<< HEAD
 
 //frontend administration
-Route::get('/frontend/administration', function() {
-    return view('front.pages.administration');
-})->name('administration');
-=======
-//frontend administration
 Route::get('/frontend/administration',[AdministrationController::class,"index"])->name("frontAdministration");
->>>>>>> yves
