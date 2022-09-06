@@ -174,11 +174,13 @@
     .imageTeam{
         height: 2.5rem;
         width: 2.5rem;
+        border: 5px solid rgb(248 250 252) ;
     }
 
     .imgTeam{
         height: 2.5rem;
         width: 2.5rem;
+
     }
 
 }
