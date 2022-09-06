@@ -18,7 +18,10 @@ class AdministrationController extends Controller
     public function index()
     {
         $enfants = Backaccueil::find(1);
-        $data = Profilenfant::find(1);
+
+        $data = Profilenfant::where('backaccueil_id', '=', '1')
+            ->get();
+
         return view("front.pages.administration", compact("enfants", "data"));
     }
 

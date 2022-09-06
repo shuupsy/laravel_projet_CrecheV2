@@ -19,8 +19,8 @@ class ProfilenfantSeeder extends Seeder
             [
                 "backaccueil_id" => 1,
                 "nutritional" => "mange avec une cullière, mixé, préfère courgette, hallal",
-                "picturePermission" => "oui",
-                "exitPermission" => "non",
+                "picturePermission" => true,
+                "exitPermission" => false,
                 "allergy" => "oeuf,tomate,raisin",
                 "size" => "70cm",
                 "weight" => "8kg",
@@ -32,8 +32,8 @@ class ProfilenfantSeeder extends Seeder
             [
                 "backaccueil_id" => 2,
                 "nutritional" => "mange avec les mains",
-                "picturePermission" => "oui",
-                "exitPermission" => "non",
+                "picturePermission" => true,
+                "exitPermission" => false,
                 "allergy" => "oeuf,tomate,raisin",
                 "size" => "70cm",
                 "weight" => "8kg",
@@ -45,8 +45,8 @@ class ProfilenfantSeeder extends Seeder
             [
                 "backaccueil_id" => 3,
                 "nutritional" => "mange avec une cullière",
-                "picturePermission" => "oui",
-                "exitPermission" => "non",
+                "picturePermission" => true,
+                "exitPermission" => false,
                 "allergy" => "oeuf,tomate,raisin",
                 "size" => "70cm",
                 "weight" => "8kg",
@@ -58,8 +58,8 @@ class ProfilenfantSeeder extends Seeder
             [
                 "backaccueil_id" => 4,
                 "nutritional" => "mange avec une cullière",
-                "picturePermission" => "oui",
-                "exitPermission" => "non",
+                "picturePermission" => true,
+                "exitPermission" => false,
                 "allergy" => "oeuf,raisin",
                 "size" => "70cm",
                 "weight" => "8kg",
