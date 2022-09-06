@@ -1,6 +1,6 @@
-<div class="absolute flex justify-center items-center w-screen my-20 sizeIcon">
+<div class="flex justify-center items-center my-20">
     <!--modal HORAIRE-->
-    <div class="modalWindow hidden flex justify-evenly flex-col items-center text-cente relative">
+    <div class="modalWindow hidden flex justify-evenly flex-col items-center text-center relative">
 
         @include('back.partial.modal-closebtn')
 
@@ -35,7 +35,7 @@
     </div>
 
     <!--modal HUMEUR-->
-    <div class="modalWindow hidden flex justify-evenly flex-col items-center modalHumeur ">
+    <div class="modalWindow hidden flex justify-evenly flex-col items-center">
 
         @include('back.partial.modal-closebtn')
 
@@ -126,7 +126,7 @@
 
         @include('back.partial.modal-closebtn')
 
-        <h3 class="text-2xl font-bold">Comment {{ $data->prenom }} a mangé ?</h3>
+        <h3 class="text-2xl font-bold text-center">Comment {{ $data->prenom }} a mangé ?</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
             @csrf
