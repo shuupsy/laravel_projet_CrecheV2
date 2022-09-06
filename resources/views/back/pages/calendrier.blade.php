@@ -27,8 +27,11 @@
             @foreach ($journalier as $item)
             <div class="contenuActivite">
                 <div class="dateC">{{$item->updated_at->format("d")}}</div>
-                <div>{{$item->activity}}:</div>
-                <div>{{$item->response}}</div>
+                <div class="flex flex-col">
+                    <div class="font-bold">{{$item->activity}}:</div>
+                    <div>{{$item->response}}</div>
+                </div>
+
             </div>
             @endforeach
         </div>
