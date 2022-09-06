@@ -39,7 +39,7 @@ Route::get('/frontend/accueil',[FrontaccueilController::class,"index"])->name("f
 
 //frontend calendrier
 Route::get('/frontend/calendrier',[CalendrierparentsController::class,"index"])->name("frontCalendrier");
-
+Route::get('/frontend/calendrier/{id}',[CalendrierparentsController::class,"affichageDay"])->name("frontaffichageDay");
 //frontend inventaire
 Route::get('/frontend/inventaire',[InventaireparentsController::class,"index"])->name("frontInventaire");
 
