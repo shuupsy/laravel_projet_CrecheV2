@@ -141,3 +141,8 @@ body {
     -webkit-appearance: none;
 }
 
+
+/* Administration */
+#file-upload[type="file"] {
+    display: none;
+}
