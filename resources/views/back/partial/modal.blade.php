@@ -35,7 +35,7 @@
     </div>
 
     <!--modal HUMEUR-->
-    <div class="modalWindow hidden flex justify-evenly flex-col items-center">
+    <div class="modalWindow hidden flex justify-evenly flex-col items-center text-center relative">
 
         @include('back.partial.modal-closebtn')
 
@@ -99,7 +99,7 @@
     </div>
 
     <!--modal ACTIVITE-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center" id='modal-activity'>
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative" id='modal-activity'>
 
         @include('back.partial.modal-closebtn')
 
@@ -123,7 +123,7 @@
     </div>
 
     <!--modal REPAS-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center">
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative">
 
         @include('back.partial.modal-closebtn')
 
@@ -172,7 +172,7 @@
     </div>
 
     <!--modal SOMMEIL-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center">
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative">
 
         @include('back.partial.modal-closebtn')
 
@@ -234,7 +234,7 @@
     </div>
 
     <!--modal CHANGE-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center">
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative">
 
         @include('back.partial.modal-closebtn')
 
@@ -256,7 +256,7 @@
     </div>
 
     <!--modal DIARRHEE-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center">
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative">
 
         @include('back.partial.modal-closebtn')
 
@@ -277,7 +277,7 @@
     </div>
 
     <!--modal FIEVRE-->
-    <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative">
 
         @include('back.partial.modal-closebtn')
 
@@ -307,7 +307,7 @@
     </div>
 
     <!--modal BLESSURE-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center" id='modal-blessure'>
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative" id='modal-blessure'>
 
         @include('back.partial.modal-closebtn')
 
@@ -331,7 +331,7 @@
     </div>
 
     <!--modal SANTE-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center">
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative">
 
         @include('back.partial.modal-closebtn')
 
@@ -341,5 +341,5 @@
             {{ $enfants->allergy }}
         </div>
     </div>
-    
+
 </div>
