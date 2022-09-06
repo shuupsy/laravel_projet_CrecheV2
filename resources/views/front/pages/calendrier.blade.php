@@ -37,9 +37,11 @@
                         <div class="flex flex-col">
                             <div class="font-bold">{{ $item->activity }}:</div>
                             <div>{{ $item->response }}</div>
-                            {{ $enfants[0]->nom }}
-                        </div>
 
+                        </div>
+                        <div class="font-thin">
+                            {{$enfants[0]->prenom }} {{$enfants[0]->nom }}
+                        </div>
                     </div>
                 @endif
             @endforeach
