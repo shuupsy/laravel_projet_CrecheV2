@@ -1,6 +1,11 @@
 @extends("front.layout.index")
+
 @section("content")
-<div class="contenuProfil">
+{{-- Header --}}
+<div class='headers flex flex-col justify-center items-start xl:items-center px-6'>
+    <h1 class="text-3xl font-semibold text-gray-800 lg:text-4xl dark:text-white">Profil de votre enfant</h1>
+</div>
+<div class="contenu contenuProfil">
     <div class="infosGen">
         <p class="prenom">{{$nom->prenom}} {{$nom->nom}}</p>
         <p> <img class="bg-[#CDD3DF] w-24 h-24 rounded-full p-4 my-4" src="/assets/img/baby.svg"
