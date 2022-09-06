@@ -4,7 +4,7 @@
     <section class="bg-white dark:bg-gray-900">
 
             {{-- Headers --}}
-            <div class='headers flex flex-col justify-center items-center'>
+            <div class='headers flex flex-col justify-center items-start xl:items-center px-6'>
                 <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Enfants
                     inscrits</h1>
 

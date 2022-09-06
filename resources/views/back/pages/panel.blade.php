@@ -2,8 +2,9 @@
 
 @section('content')
     {{-- Header --}}
-    <div class="headers flex items-center justify-end px-6 border-b-2">
-        <h1 class='text-3xl font-thin'>Dashboard - <span class='font-bold'>{{ $data->prenom }} {{ $data->nom }}</span></h1>
+    <div class="headers flex flex-col md:flex-row md:justify-end md:items-center md:gap-2 items-start justify-center px-6 border-b-2 text-3xl">
+        <h1 class='font-thin'>Dashboard</h1>
+        <h2 class='font-bold'>{{ $data->prenom }} {{ $data->nom }}</h2>
     </div>
 
     {{-- Icones --}}
