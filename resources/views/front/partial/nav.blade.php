@@ -42,11 +42,7 @@
 
                 {{-- Administration --}}
                 <a class="flex items-center gap-5 px-4 py-2  text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
-<<<<<<< HEAD
                     href="{{ Route('administration') }}">
-=======
-                    href="{{Route("frontAdministration")}}">
->>>>>>> yves
                     <i class='bx bx-file text-xl'></i>
                     <span class="font-medium">Administration</span>
                 </a>

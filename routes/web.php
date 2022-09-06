@@ -50,4 +50,4 @@ Route::get('/frontend/profil',[ProfilenfantController::class,"index"])->name("fr
 Route::get('/frontend/messagerie',[MessageenfantsController::class,"index"])->name("frontMessagerie");
 Route::post("/frontend/messagerie/envoi/{id}",[MessageenfantsController::class,"store"]);
 //frontend administration
-Route::get('/frontend/administration',[AdministrationController::class,"index"])->name("frontAdministration");
+Route::get('/frontend/administration',[AdministrationController::class,"index"])->name("administration");
