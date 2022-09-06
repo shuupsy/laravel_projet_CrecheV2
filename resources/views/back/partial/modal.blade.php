@@ -341,4 +341,5 @@
             {{ $enfants->allergy }}
         </div>
     </div>
+    
 </div>
