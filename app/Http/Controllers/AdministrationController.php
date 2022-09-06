@@ -17,13 +17,9 @@ class AdministrationController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        return view("front.pages.administration");
-=======
         $enfants = Backaccueil::find(1);
         $data = Profilenfant::find(1);
         return view("front.pages.administration", compact("enfants", "data"));
->>>>>>> 2c3f07fdd41f7e535cdd88ddfe7554bc4bab7041
     }
 
     /**
