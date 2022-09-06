@@ -1,3 +1,12 @@
+/* Sidebar */
+let sidebar = document.querySelector('.sidebar')
+let burger = document.querySelectorAll('.btn')
+
+function Burger () {
+    sidebar.classList.toggle('open')
+    burger.classList.toggle('bx-x')
+}
+
 /* PANEL */
 panelBtn = document.querySelectorAll('.panelBtn') // Tous les icônes
 modalWindow = document.querySelectorAll('.modalWindow') // Toutes les modals
@@ -20,7 +29,18 @@ panelBtn.forEach((button, index) => {
     })
 });
 
-/* Horaire */
+/* Fermeture de modal avec bouton X */
+let closemodal = document.querySelectorAll('.close-x')
+
+closemodal.forEach((close, index) => {
+    close.addEventListener('click', () => {
+        modalWindow[index].classList.add("hidden") // Cache modal
+        panelBtn[index].classList.remove('panelActive') // Enlève couleur
+    })
+})
+
+
+/* Modal Horaire */
 let heureActuelle = document.querySelector('#heureActuelle')
 
 function hour() {
@@ -33,7 +53,7 @@ function hour() {
 hour(), setInterval(hour, 6000)
 
 
-/* Température */
+/* Modal Température */
 let rangeSlider = document.getElementById("rs-range-line");
 let rangeBullet = document.getElementById("rs-bullet");
 

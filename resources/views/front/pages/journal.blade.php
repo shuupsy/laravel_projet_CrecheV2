@@ -38,6 +38,12 @@
         </form>
     </section>
     <script>
+        let btnIndividuel = document.querySelectorAll("panelTeam");
+        btnIndividuel.array.forEach((button,index)=>{
+            button.addEventListener("click",()=>{
+
+            })
+        })
         function ouvertureMessage(x) {
             let formAffichage = document.getElementById("postForm")
             formAffichage.setAttribute("action", `/frontend/messagerie/envoi/${x}`)

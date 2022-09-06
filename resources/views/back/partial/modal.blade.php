@@ -1,6 +1,9 @@
 <div class="absolute flex justify-center items-center w-screen my-20 sizeIcon">
     <!--modal HORAIRE-->
-    <div class="modalWindow hidden flex justify-evenly flex-col items-center text-center">
+    <div class="modalWindow hidden flex justify-evenly flex-col items-center text-cente relative">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class='text-2xl font-black'>Horaire d'Arrivée / Sortie</h3>
 
         <span id="heureActuelle"
@@ -33,13 +36,16 @@
 
     <!--modal HUMEUR-->
     <div class="modalWindow hidden flex justify-evenly flex-col items-center modalHumeur ">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-2xl font-bold">Humeur en météo</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
             @csrf
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Humeur" name="activity">
-            <div class='flex gap-5 my-8'>
+            <div class='grid grid-cols-3 justify-center md:flex gap-5 my-8'>
                 {{-- COLERE --}}
                 <div class="flex flex-col items-center justify-center">
                     <label for="lightning">
@@ -84,7 +90,7 @@
 
             <div class="flex justify-center">
                 <button
-                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    class="px-6 py-2 w-24 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-md bg-gray-600 hover:bg-slate-800 hover:shadow-xl focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                     Valider
                 </button>
             </div>
@@ -94,9 +100,12 @@
 
     <!--modal ACTIVITE-->
     <div class="modalWindow hidden flex justify-center flex-col items-center" id='modal-activity'>
-        <p class="text-2xl font-bold">Activité</p>
 
-        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col'>
+        @include('back.partial.modal-closebtn')
+
+        <h3 class="text-2xl font-bold">Activité</h3>
+
+        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col w-11/12 mx-auto'>
             @csrf
             <label class="mt-5">Description</label>
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
@@ -114,37 +123,40 @@
 
     <!--modal REPAS-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-2xl font-bold">Comment {{ $data->prenom }} a mangé ?</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
             @csrf
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Repas" name="activity">
-            <div class='flex gap-6 my-8'>
-                <div class="flex flex-col justify-center mx-3 text-xl">
+            <div class='md:flex gap-6 my-8'>
+                <div class="md:flex flex-col justify-center mx-3 text-xl">
+                    <input type="radio" name="response" value="rien mangé" id="rien">
                     <label class="my-2" for="rien">
                         Pas bien
                     </label>
-                    <input type="radio" name="response" value="rien mangé" id="rien">
                 </div>
 
-                <div class="flex flex-col justify-center mx-3 text-xl">
+                <div class="md:flex flex-col justify-center mx-3 text-xl">
+                    <input type="radio" name="response" value="pas beaucoup mangé" id="pasbien">
                     <label class="my-2" for="pasbien">
                         Moyen
                     </label>
-                    <input type="radio" name="response" value="pas beaucoup mangé" id="pasbien">
                 </div>
-                <div class="flex flex-col justify-center mx-3 text-xl">
+                <div class="md:flex flex-col justify-center mx-3 text-xl">
+                    <input type="radio" name="response" value="assez bien mangé" id="bien">
                     <label class="my-2" for="bien">
                         Bien
                     </label>
-                    <input type="radio" name="response" value="assez bien mangé" id="bien">
                 </div>
-                <div class="flex flex-col justify-center mx-3 text-xl">
+                <div class="md:flex flex-col justify-center mx-3 text-xl">
+                    <input type="radio" name="response" value="très bien mangé" id="tresbien">
                     <label class="my-2" for="tresbien">
                         Très bien
                     </label>
-                    <input type="radio" name="response" value="très bien mangé" id="tresbien">
                 </div>
             </div>
 
@@ -160,6 +172,9 @@
 
     <!--modal SOMMEIL-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-2xl font-bold">Durée de la sieste</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -219,7 +234,10 @@
 
     <!--modal CHANGE-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
-        <h3 class='text-2xl font-bold'>La change de {{ $data->prenom }} a été effectuée ?</h3>
+
+        @include('back.partial.modal-closebtn')
+
+        <h3 class='text-2xl font-bold text-center'>La change de {{ $data->prenom }} a été effectuée ?</h3>
 
         <div class="my-5">
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -238,7 +256,10 @@
 
     <!--modal DIARRHEE-->
     <div class="modalWindow hidden flex justify-center flex-col items-center">
-        <h3 class='text-2xl font-bold'>{{ $data->prenom }} a eu la diarrhée ?</h3>
+
+        @include('back.partial.modal-closebtn')
+
+        <h3 class='text-2xl font-bold text-center'>{{ $data->prenom }} a eu la diarrhée ?</h3>
 
         <div class="my-5">
             <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -256,6 +277,9 @@
 
     <!--modal FIEVRE-->
     <div class="modalWindow hidden flex justify-center modalChange flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class='text-2xl font-bold'>Fièvre de: {{ $data->prenom }} {{ $data->nom }}</h3>
 
         <form action="/backend/{{ $data->id }}/panel/activity" method="POST">
@@ -282,9 +306,12 @@
 
     <!--modal BLESSURE-->
     <div class="modalWindow hidden flex justify-center flex-col items-center" id='modal-blessure'>
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-xl font-bold">Blessure</h3>
 
-        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col'>
+        <form action="/backend/{{ $data->id }}/panel/activity" method="POST" class='flex flex-col w-11/12 mx-auto'>
             @csrf
             <label class="mt-5">Description</label>
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
@@ -302,6 +329,9 @@
 
     <!--modal SANTE-->
     <div class="modalWindow hidden flex justify-center modalActivite flex-col items-center">
+
+        @include('back.partial.modal-closebtn')
+
         <h3 class="text-3xl">EN COURS</h3>
 
     </div>

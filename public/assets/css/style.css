@@ -2,7 +2,8 @@
     font-family: 'Poppins';
     src: url('../fonts/Poppins-Light.ttf') font-weight-normal,
         url('../fonts/Poppins-Bold.ttf') font-weight-bold,
-        url('../fonts/Poppins-Black.ttf') font-weight-black;
+        url('../fonts/Poppins-Black.ttf') font-weight-black,
+        url('../fonts/Poppins-Thing.ttf') font-weight-thin;
 }
 
 * {
@@ -12,7 +13,62 @@
     box-sizing: border-box;
 }
 
-.panelActive{
+body {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+}
+
+.sidebar { /* Navbar */
+    width: 16rem;
+    transition: all 0.5s ease;
+    z-index: 99;
+}
+
+.burger { /* Menu burger */
+    display: none;
+}
+
+/* Headers */
+.headers {
+    width: 100%;
+    height: 8rem;
+}
+
+/* Contenu */
+.contenu {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+/* Section (NURSE) - liste bébé */
+#liste-bebe {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+/* Section (NURSE) - card-baby */
+
+.card-baby img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Panel (NURSE) */
+#icones {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.panelBtn img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.panelActive{ /* Au clic, devient vert */
     background-color: #8EC9C1;
 }
 
@@ -25,8 +81,7 @@
 }
 
 #modal-activity textarea, #modal-blessure textarea{
-    width: 500px;
-    height: 150px;
+    height: 175px;
     padding: 15px;
 }
 
@@ -35,7 +90,7 @@
     display: inline-block;
   }
 
-  #sleep_option input[type="radio"]:checked + span {
+#sleep_option input[type="radio"]:checked + span {
     background-color: #fec89a;
   }
 
@@ -84,4 +139,10 @@
     background: rgba(255,255,255,1);
     cursor: pointer;
     -webkit-appearance: none;
+}
+
+
+/* Administration */
+#file-upload[type="file"] {
+    display: none;
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\BackaccueilController;
 use App\Http\Controllers\FrontaccueilController;
 use App\Http\Controllers\ProfilenfantController;
+use App\Http\Controllers\AdministrationController;
 use App\Http\Controllers\MessageenfantsController;
 use App\Http\Controllers\CalendriernurseController;
 use App\Http\Controllers\InventairenurseController;
@@ -39,7 +40,7 @@ Route::get('/frontend/accueil',[FrontaccueilController::class,"index"])->name("f
 
 //frontend calendrier
 Route::get('/frontend/calendrier',[CalendrierparentsController::class,"index"])->name("frontCalendrier");
-
+Route::get('/frontend/calendrier/{id}',[CalendrierparentsController::class,"affichageDay"])->name("frontaffichageDay");
 //frontend inventaire
 Route::get('/frontend/inventaire',[InventaireparentsController::class,"index"])->name("frontInventaire");
 
@@ -48,3 +49,5 @@ Route::get('/frontend/profil',[ProfilenfantController::class,"index"])->name("fr
 //frontend messagerie
 Route::get('/frontend/messagerie',[MessageenfantsController::class,"index"])->name("frontMessagerie");
 Route::post("/frontend/messagerie/envoi/{id}",[MessageenfantsController::class,"store"]);
+//frontend administration
+Route::get('/frontend/administration',[AdministrationController::class,"index"])->name("administration");

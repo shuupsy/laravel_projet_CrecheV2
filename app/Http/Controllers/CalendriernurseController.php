@@ -24,7 +24,8 @@ class CalendriernurseController extends Controller
         $journalier = Journalparents::all();
         $messages = Messageenfants::all();
         $nurses = Frontaccueil::all();
-        return view("back.pages.calendrier",compact("enfants", "journalier","messages","nurses"));
+        $validation = 0;
+        return view("back.pages.calendrier",compact("enfants", "journalier","messages","nurses","validation"));
     }
 
     public function affichageDay($id)
@@ -32,8 +33,9 @@ class CalendriernurseController extends Controller
         $enfants = Backaccueil::all();
         $messages = Messageenfants::all();
         $nurses = Frontaccueil::all();
+        $validation = 1;
         $journalier = Journalparents::whereDay("updated_at", "=", $id)->get();
-        return view("back.pages.calendrier",compact("enfants","journalier","messages","nurses"));
+        return view("back.pages.calendrier",compact("enfants","journalier","messages","nurses","validation"));
     }
     /**
      * Show the form for creating a new resource.

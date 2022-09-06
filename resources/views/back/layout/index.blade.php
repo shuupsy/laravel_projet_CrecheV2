@@ -15,7 +15,7 @@
     <title>NURSE</title>
 </head>
 
-<body class='flex'>
+<body>
     <header>
         @include('back.partial.nav')
     </header>

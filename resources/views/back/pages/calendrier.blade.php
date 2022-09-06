@@ -25,6 +25,7 @@
         </div>
         <div id="GenerateDay" class="Information bg-zinc-300 flex flex-col gap-2 items-left activiteContainer">
             @foreach ($journalier as $item)
+            @if ($validation == 1)
             <div class="contenuActivite">
                 <div class="dateC">{{$item->updated_at->format("d")}}</div>
                 <div class="flex flex-col">
@@ -33,6 +34,7 @@
                 </div>
 
             </div>
+            @endif
             @endforeach
         </div>
     </div>
