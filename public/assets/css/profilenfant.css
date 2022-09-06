@@ -115,7 +115,7 @@
   @media screen and (max-width: 600px) {
     /* Place the timelime to the left */
     .timeline::after {
-    left: 31px;
+    left: 10rem;
     }
 
     /* Full-width containers */
@@ -123,12 +123,26 @@
     width: 100%;
     }
 
+    .right, .left {
+        left: 0%;
+      }
+
     .content{
         display: flex;
         flex-direction: column;
         width: 20rem;
         z-index: 1;
     }
+
+    .containerProfil.left .content{
+        flex-direction: column-reverse;
+    }
+
+    .iconProfil{
+        margin-bottom: -1rem;
+    }
+
+
 }
 
 .soustitre{
