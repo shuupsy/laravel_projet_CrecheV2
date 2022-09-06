@@ -162,4 +162,12 @@
         border-radius: 10px;
     }
 
+    .choixUsersMessagerie{
+        display: none;
+    }
+
+    .teamMessagerie{
+        left: -8rem;
+        top: -1rem;
+    }
 }
