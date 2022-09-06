@@ -13,8 +13,6 @@
                 </p>
             </div>
 
-            <hr>
-
             {{-- Liste d'enfants --}}
             <div class="contenu" id='liste-bebe'>
 
