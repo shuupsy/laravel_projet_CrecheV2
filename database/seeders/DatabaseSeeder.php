@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             BackaccueilSeeder::class,
             InventairenurseSeeder::class,
             InventaireparentsSeeder::class,
-            FrontaccueilSeeder::class
+            FrontaccueilSeeder::class,
+            ProfilenfantSeeder::class
         ]);
     }
 }

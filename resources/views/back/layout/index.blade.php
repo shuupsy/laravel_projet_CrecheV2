@@ -9,6 +9,7 @@
     {{-- CSS --}}
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/media.css">
+    <link rel="stylesheet" href="/assets/css/calendrier.css">
     {{-- BoxIcons --}}
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>NURSE</title>
@@ -22,7 +23,7 @@
     <main>
         @yield('content')
     </main>
-
+    @include("back.partial.modalMessage")
     {{-- Link JS --}}
     <script src="/assets/js/panel.js"></script>
 </body>
