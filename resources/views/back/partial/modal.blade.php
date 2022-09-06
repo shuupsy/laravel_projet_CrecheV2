@@ -45,7 +45,7 @@
             @csrf
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Humeur" name="activity">
-            <div class='flex gap-5 my-8'>
+            <div class='grid grid-cols-3 justify-center md:flex gap-5 my-8'>
                 {{-- COLERE --}}
                 <div class="flex flex-col items-center justify-center">
                     <label for="lightning">
@@ -134,29 +134,29 @@
             <input class="hidden" type="text" value="Repas" name="activity">
             <div class='md:flex gap-6 my-8'>
                 <div class="md:flex flex-col justify-center mx-3 text-xl">
+                    <input type="radio" name="response" value="rien mangé" id="rien">
                     <label class="my-2" for="rien">
                         Pas bien
                     </label>
-                    <input type="radio" name="response" value="rien mangé" id="rien">
                 </div>
 
                 <div class="md:flex flex-col justify-center mx-3 text-xl">
+                    <input type="radio" name="response" value="pas beaucoup mangé" id="pasbien">
                     <label class="my-2" for="pasbien">
                         Moyen
                     </label>
-                    <input type="radio" name="response" value="pas beaucoup mangé" id="pasbien">
                 </div>
                 <div class="md:flex flex-col justify-center mx-3 text-xl">
+                    <input type="radio" name="response" value="assez bien mangé" id="bien">
                     <label class="my-2" for="bien">
                         Bien
                     </label>
-                    <input type="radio" name="response" value="assez bien mangé" id="bien">
                 </div>
                 <div class="md:flex flex-col justify-center mx-3 text-xl">
+                    <input type="radio" name="response" value="très bien mangé" id="tresbien">
                     <label class="my-2" for="tresbien">
                         Très bien
                     </label>
-                    <input type="radio" name="response" value="très bien mangé" id="tresbien">
                 </div>
             </div>
 
