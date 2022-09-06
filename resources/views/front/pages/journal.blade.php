@@ -12,7 +12,7 @@
                 @foreach ($data as $item)
                     <div onclick="ouvertureMessage({{ $item->id }})"
                         class="flex flex-col items-center p-8 transition-colors duration-300 transform cursor-pointer group hover:bg-[#8EC9C1] rounded-xl">
-                        <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="{{ $item->img }}"
+                        <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="/assets/img/team/{{ $item->img }}"
                             alt="">
                         <h1
                             class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
