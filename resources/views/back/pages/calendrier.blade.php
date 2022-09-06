@@ -56,12 +56,6 @@
             }
 
         }
-
-        // function actived(x){
-        //     x.addEventListener('click', ()=>{
-
-        //     })
-        // }
         creationDay()
 
     </script>

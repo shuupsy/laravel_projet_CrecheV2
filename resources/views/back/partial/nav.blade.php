@@ -2,7 +2,7 @@
     <i class='bx bx-menu p-2 text-xl border-2 border-slate-600 rounded-full cursor-pointer' onclick="Burger()"></i>
 </div>
 
-<div class="sidebar flex flex-col h-screen px-4 pt-8 pb-3 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
+<div class="sidebar fixed flex flex-col h-screen px-4 pt-8 pb-3 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
 
 
     <div class="flex flex-col justify-between flex-1 mt-6">
@@ -41,12 +41,12 @@
                     <span class="font-medium">Inventaire</span>
                 </a>
 
-                {{-- Inventaire --}}
-                <a class="flex items-center gap-5 px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
+                {{-- Messagerie --}}
+                {{-- <a class="flex items-center gap-5 px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700"
                     href="#">
                     <i class='bx bx-chat text-xl'></i>
                     <span class="font-medium">Messagerie</span>
-                </a>
+                </a> --}}
             </div>
 
         </nav>

@@ -17,37 +17,37 @@ class FrontaccueilSeeder extends Seeder
     {
         DB::table("frontaccueils")->insert([
             [
-                "img" => "lien à modifier",
+                "img" => "femme3.jpg",
                 "nom" => "Martin",
                 "prenom" => "Zoé",
                 "poste" => "Direction"
             ],
             [
-                "img" => "lien à modifier",
+                "img" => "femme1.jpg",
                 "nom" => "Wauters",
                 "prenom" => "Ilyana",
                 "poste" => "Direction"
             ],
             [
-                "img" => "lien à modifier",
+                "img" => "homme1.jpg",
                 "nom" => "Stevens",
                 "prenom" => "Max",
                 "poste" => "Comptable"
             ],
             [
-                "img" => "lien à modifier",
+                "img" => "femme2.jpg",
                 "nom" => "Van de velde",
                 "prenom" => "Elyna",
                 "poste" => "Puéricultrice"
             ],
             [
-                "img" => "lien à modifier",
+                "img" => "femme4.jpg",
                 "nom" => "Lambert",
                 "prenom" => "Sophia",
                 "poste" => "Puéricultrice"
             ],
             [
-                "img" => "lien à modifier",
+                "img" => "femme5.jpg",
                 "nom" => "Mertens",
                 "prenom" => "Amelie",
                 "poste" => "Puéricultrice"
