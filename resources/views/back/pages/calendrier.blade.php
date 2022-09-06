@@ -6,11 +6,11 @@
         <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Calendrier</h1>
     </div>
 
-    <section class='contenu h-screen sm:flex sm:flex justify-center items-center'>
-        <div class="bg-zinc-100 MonthCalendar">
+    <section class='contenu flex flex-col sm:flex-row sm:gap-5 justify-center items-center bg-zinc-100 sm:bg-inherit '>
+        <div class="bg-zinc-100 p-3 w-full">
             <p>Septembre 2022</p>
 
-            <form id="GridMonth" class="grilleMonthCalendar" action="">
+            <form id="GridMonth" class="grilleMonthCalendar gap-2 p-3 w-full" action="">
                 <div class="text-zinc-400">Lu</div>
                 <div class="text-zinc-400">Ma</div>
                 <div class="text-zinc-400">Me</div>
@@ -25,7 +25,7 @@
             </form>
         </div>
 
-        <div id="GenerateDay" class="Information bg-zinc-300 flex flex-col gap-2 items-left activiteContainer">
+        <div id="GenerateDay" class="activiteContainer bg-zinc-300 flex flex-col gap-2 items-left border-2 border-zinc-400">
             @foreach ($journalier as $item)
                 @if ($validation == 1)
                     <div class="contenuActivite">
