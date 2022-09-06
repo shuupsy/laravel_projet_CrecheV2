@@ -8,7 +8,7 @@
                 <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Enfants
                     inscrits</h1>
 
-                <p class="text-gray-500 dark:text-gray-300">
+                <p class="font-thin text-gray-500 dark:text-gray-300">
                     Section: Bébé, Moyen, Grand
                 </p>
             </div>
