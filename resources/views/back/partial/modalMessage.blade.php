@@ -5,7 +5,7 @@
         @foreach ($nurses as $item)
             <div class="bubbleTeam">
                 <div>
-                    <img class="imgTeam" src="/assets/img/team{{ $item->img }}" alt="">
+                    <img class="imgTeam" src="/assets/img/team/{{$item->img}}" alt="">
                 </div>
                 <div>
                     <button onclick="affichageIndividuel({{ $item->id }})"
