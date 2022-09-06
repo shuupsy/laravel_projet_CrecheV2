@@ -6,29 +6,25 @@
         <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Calendrier</h1>
     </div>
 
-    <div class="h-screen flex justify-center items-center">
-        <div class="bg-zinc-100 MonthCalendar m-10">
-            <div class="m-5">
-                <p>
-                    Septembre 2022
-                </p>
-                <div>
-                    <form id="GridMonth" class="m-10 grilleMonthCalendar" action="">
-                        <div class="text-zinc-400">Lu</div>
-                        <div class="text-zinc-400">Ma</div>
-                        <div class="text-zinc-400">Me</div>
-                        <div class="text-zinc-400">Je</div>
-                        <div class="text-zinc-400">Ve</div>
-                        <div class="text-zinc-400">Sa</div>
-                        <div class="text-zinc-400">Di</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+    <section class='contenu h-screen sm:flex sm:flex justify-center items-center'>
+        <div class="bg-zinc-100 MonthCalendar">
+            <p>Septembre 2022</p>
 
-                    </form>
-                </div>
-            </div>
+            <form id="GridMonth" class="grilleMonthCalendar" action="">
+                <div class="text-zinc-400">Lu</div>
+                <div class="text-zinc-400">Ma</div>
+                <div class="text-zinc-400">Me</div>
+                <div class="text-zinc-400">Je</div>
+                <div class="text-zinc-400">Ve</div>
+                <div class="text-zinc-400">Sa</div>
+                <div class="text-zinc-400">Di</div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </form>
         </div>
+
         <div id="GenerateDay" class="Information bg-zinc-300 flex flex-col gap-2 items-left activiteContainer">
             @foreach ($journalier as $item)
                 @if ($validation == 1)
@@ -43,7 +39,9 @@
                 @endif
             @endforeach
         </div>
-    </div>
+
+    </section>
+
     <script>
         function creationDay() {
             let gridMonth = document.getElementById("GridMonth")
