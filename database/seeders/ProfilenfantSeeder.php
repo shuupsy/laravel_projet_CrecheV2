@@ -20,7 +20,7 @@ class ProfilenfantSeeder extends Seeder
                 "backaccueil_id" => 1,
                 "nutritional" => "mange avec une cullière, mixé, préfère courgette, hallal",
                 "picturePermission" => "oui",
-                "exitPermission" => "no",
+                "exitPermission" => "non",
                 "allergy" => "oeuf,tomate,raisin",
                 "size" => "70cm",
                 "weight" => "8kg",

@@ -2,12 +2,12 @@
 
 @section("content")
 {{-- Header --}}
-<div class='headers flex flex-col justify-center items-start xl:items-center px-6'>
-    <h1 class="text-3xl font-semibold text-gray-800 lg:text-4xl dark:text-white">Profil de votre enfant</h1>
-</div>
+<div class="headers flex flex-col md:flex-row md:justify-end md:items-center md:gap-2 items-start justify-center px-6 border-b-2 text-3xl">
+    <h1 class='font-thin'>Profil</h1>
+    <h2 class='font-bold'>{{ $nom->prenom }} {{ $nom->nom }}</h2>
+  </div>
 <div class="contenu contenuProfil">
     <div class="infosGen">
-        <p class="prenom">{{$nom->prenom}} {{$nom->nom}}</p>
         <p> <img class="bg-[#CDD3DF] w-24 h-24 rounded-full p-4 my-4" src="/assets/img/baby.svg"
                 alt=""></p>
         <div class="presences">
