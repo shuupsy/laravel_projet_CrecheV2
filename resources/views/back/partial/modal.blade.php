@@ -385,7 +385,7 @@
         <div class='flex justify-evenly'>
             <div id='phot' class='flex flex-col items-center text-sm'>
                 <p>Jours de présence :</p>
-                <p>{{ $enfants->dayOfPresence }}</p>
+                <p class='font-bold'>{{ $enfants->dayOfPresence }}</p>
             </div>
         </div>
     </div>
