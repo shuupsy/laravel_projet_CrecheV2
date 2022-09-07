@@ -33,6 +33,9 @@
                             <div class="font-bold">{{ $item->activity }}:</div>
                             <div>{{ $item->response }}</div>
                         </div>
+                        <div class="font-thin">
+                            {{$enfants[$item->backaccueil_id - 1]->prenom }} {{$enfants[$item->backaccueil_id - 1]->nom }}
+                        </div>
                     </div>
                 @endif
             @endforeach
