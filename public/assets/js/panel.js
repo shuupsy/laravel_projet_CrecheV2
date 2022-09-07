@@ -10,20 +10,26 @@ function Burger () {
 /* PANEL */
 panelBtn = document.querySelectorAll('.panelBtn') // Tous les icônes
 modalWindow = document.querySelectorAll('.modalWindow') // Toutes les modals
+main = document.querySelector('main')
 
 panelBtn.forEach((button, index) => {
     button.addEventListener("click", () => { // au clic
 
         if (button.classList.contains('panelActive')) { // Checker la condition pour fermer le modal au 2ème clic
             button.classList.remove('panelActive');
-            modalWindow[index].classList.add('hidden')
+            modalWindow[index].classList.add('hidden');
+            main.classList.remove('grey')
+
         }
         else {
             for (let i = 0; i < modalWindow.length; i++) { // Réinitialisation des autres modals
                 modalWindow[i].classList.add('hidden') // Cacher tous les modals
                 panelBtn[i].classList.remove('panelActive'); // Enlever bgcolor
+                main.classList.remove('grey')
+
                 button.classList.add('panelActive'); // Ajouter bgcolor sur icône cliqué
                 modalWindow[index].classList.remove('hidden') // Afficher le modal de l'icôné sélectionné
+                main.classList.add('grey'); // Ajout fond gris derrière
             }
         }
     })
@@ -36,6 +42,7 @@ closemodal.forEach((close, index) => {
     close.addEventListener('click', () => {
         modalWindow[index].classList.add("hidden") // Cache modal
         panelBtn[index].classList.remove('panelActive') // Enlève couleur
+        main.classList.remove('grey') // Ajout fond gris derrière
     })
 })
 

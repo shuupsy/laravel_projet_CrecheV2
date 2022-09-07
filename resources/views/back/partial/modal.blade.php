@@ -124,7 +124,7 @@
     </div>
 
     <!--modal REPAS-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative">
+    <div class="modalWindow hidden flex justify-center flex-col items-center relative">
 
         @include('back.partial.modal-closebtn')
 
