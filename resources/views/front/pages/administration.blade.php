@@ -7,6 +7,7 @@
             <h1 class='text-3xl font-semibold text-gray-800 lg:text-4xl dark:text-white'>ADMINISTRATION</h1>
         </div>
 
+
         <div class='contenu flex flex-col gap-10'>
             {{-- Upload un document --}}
             <form action="" method="post"enctype="multipart/form-data">
@@ -41,11 +42,11 @@
                         <i class='bx bxs-door-open text-5xl'></i>
                     </div>
                     <p>Autorisation de sortie :
-                        {{-- @if ($data->exitPermission == true)
-                                    <i class='bx bxs-check-square text-2xl text-green-500'></i>
-                                @else
-                                    <i class='bx bxs-x-square text-2xl text-red-500'></i>
-                                @endif --}}
+                        @if ($data[0]->exitPermission == true)
+                            <i class='bx bxs-check-square text-2xl text-green-500'></i>
+                        @else
+                            <i class='bx bxs-x-square text-2xl text-red-500'></i>
+                        @endif
                     </p>
                 </div>
 
@@ -56,11 +57,11 @@
                         <i class='bx bxs-camera text-5xl'></i>
                     </div>
                     <p>Autorisation de photos :
-                        {{-- @if ($data->picturePermission == true)
-                                    <i class='bx bxs-check-square text-2xl text-green-500'></i>
-                                @else
-                                    <i class='bx bxs-x-square text-2xl text-red-500'></i>
-                                @endif --}}
+                        @if ($data[0]->picturePermission == true)
+                            <i class='bx bxs-check-square text-2xl text-green-500'></i>
+                        @else
+                            <i class='bx bxs-x-square text-2xl text-red-500'></i>
+                        @endif
                     </p>
                 </div>
 
@@ -71,8 +72,10 @@
                         <i class='bx bx-calendar text-5xl'></i>
                     </div>
                     <div>
-                        {{-- <p>Jours de présence <span class='font-bold border border-dotted border-black rounded-full py-2 px-3'>{{ $data->presence }}</span></p>
-                                <p>{{ $data->dayOfPresence }}</p> --}}
+                        <p>Jours de présence <span
+                                class='font-bold border border-dotted border-black rounded-full py-2 px-3'>{{ $data[0]->presence }}</span>
+                        </p>
+                        <p>{{ $data[0]->dayOfPresence }}</p>
                     </div>
                 </div>
 

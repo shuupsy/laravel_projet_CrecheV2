@@ -17,19 +17,7 @@
     height: 100vh;
 }
 
-/*Calendar*/
-.MonthCalendar{
 
-}
-.grilleMonthCalendar{
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(7, 1fr);
-}
-.Information{
-    width: 40%;
-    height: 90vh;
-}
 .menuLateralMessage{
     width: 350px;
     height: 90vh;
