@@ -349,7 +349,7 @@
 
             <ul>
                 @foreach ($allergies as $allergy)
-                    <li class='list-disc'>{{ $allergy }}</li>
+                    <li class='list-disc font-bold'>{{ $allergy }}</li>
                 @endforeach
             </ul>
         </div>
