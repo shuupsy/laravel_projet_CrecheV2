@@ -24,6 +24,13 @@ class BackaccueilSeeder extends Seeder
                 "age" => 3
             ],
             [
+                "nom" => "Diallo",
+                "prenom" => "Adeline",
+                "img" => "team/blackbaby.jpg",
+                "sexe" => "Féminin",
+                "age" => 1
+            ],
+            [
                 "nom" => "Fischer",
                 "prenom" => "Claire",
                 "img" => "team/photo-1548897969-80be2924dc9f.avif",
@@ -43,6 +50,13 @@ class BackaccueilSeeder extends Seeder
                 "img" => "team/photo-1503454537195-1dcabb73ffb9.avif",
                 "sexe" => "Masculin",
                 "age" => 2
+            ],
+            [
+                "nom" => "Nguyen",
+                "prenom" => "Nicolas",
+                "img" => "team/asianbaby.jpg",
+                "sexe" => "Masculin",
+                "age" => 1
             ]
             ]);
     }
