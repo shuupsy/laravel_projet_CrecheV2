@@ -25,6 +25,7 @@
         position: fixed;
         height: 100%;
     }
+
 }
 
 @media screen and (max-width:768px) {
@@ -44,4 +45,8 @@
         z-index: 99;
         background-color: white;
     }
+    .panelBtn img {
+        height: unset;
+    }
+
 }
