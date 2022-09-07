@@ -41,8 +41,9 @@
                         <i class='bx bx-calendar text-4xl'></i>
                     </div>
                     <div>
-                        <p>Jours de présence <span
-                                class='font-bold border border-dotted border-black rounded-full py-2 px-3'>{{ $data[0]->presence }}</span>
+                        <p>Jours de présence
+                            <span
+                                class='font-bold border border-dotted border-black rounded-full py-2 px-2'>{{ $data[0]->presence }}</span>
                         </p>
                         <p>{{ $data[0]->dayOfPresence }}</p>
                     </div>
@@ -56,9 +57,9 @@
                     </div>
                     <p>Autorisation de sortie :
                         @if ($data[0]->exitPermission == true)
-                            <i class='bx bxs-check-square text-2xl text-green-500'></i>
+                            <i class='bx bxs-check-square text-2xl text-green-500 pt-2'></i>
                         @else
-                            <i class='bx bxs-x-square text-2xl text-red-500'></i>
+                            <i class='bx bxs-x-square text-2xl text-red-500 pt-2'></i>
                         @endif
                     </p>
                 </div>
@@ -71,9 +72,9 @@
                     </div>
                     <p>Autorisation de photos :
                         @if ($data[0]->picturePermission == true)
-                            <i class='bx bxs-check-square text-2xl text-green-500'></i>
+                            <i class='bx bxs-check-square text-2xl text-green-500 pt-2'></i>
                         @else
-                            <i class='bx bxs-x-square text-2xl text-red-500'></i>
+                            <i class='bx bxs-x-square text-2xl text-red-500 pt-2'></i>
                         @endif
                     </p>
                 </div>
