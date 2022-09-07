@@ -7,6 +7,7 @@ use App\Http\Controllers\BackaccueilController;
 use App\Http\Controllers\FrontaccueilController;
 use App\Http\Controllers\ProfilenfantController;
 use App\Http\Controllers\AdministrationController;
+use App\Http\Controllers\JournalparentsController;
 use App\Http\Controllers\MessageenfantsController;
 use App\Http\Controllers\CalendriernurseController;
 use App\Http\Controllers\InventairenurseController;
@@ -36,7 +37,10 @@ Route::get('/backend/calendrier',[CalendriernurseController::class,"index"])->na
 Route::get('/backend/calendrier/{id}',[CalendriernurseController::class,"affichageDay"]);
 
 //frontend accueil
-Route::get('/frontend/accueil',[FrontaccueilController::class,"index"])->name("frontAccueil");
+Route::get('/frontend/accueil',[CalendrierparentsController::class,"index"])->name("frontAccueil");
+
+//frontend team
+Route::get('/frontend/team',[JournalparentsController::class,"index"])->name("frontAccueil");
 
 //frontend calendrier
 Route::get('/frontend/calendrier',[CalendrierparentsController::class,"index"])->name("frontCalendrier");

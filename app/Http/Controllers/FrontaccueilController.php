@@ -16,8 +16,7 @@ class FrontaccueilController extends Controller
      */
     public function index()
     {
-        $data = Frontaccueil::all();
-        return view("front.pages.journal",compact("data"));
+       //
     }
 
     /**

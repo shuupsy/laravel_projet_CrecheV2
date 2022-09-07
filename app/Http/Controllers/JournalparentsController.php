@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Frontaccueil;
+use App\Models\Journalparents;
 use App\Http\Requests\StoreJournalparentsRequest;
 use App\Http\Requests\UpdateJournalparentsRequest;
-use App\Models\Journalparents;
 
 class JournalparentsController extends Controller
 {
@@ -15,7 +16,8 @@ class JournalparentsController extends Controller
      */
     public function index()
     {
-        //
+        $data = Frontaccueil::all();
+        return view("front.pages.team",compact("data"));
     }
 
     /**
