@@ -99,8 +99,11 @@ class InventairenurseController extends Controller
 
     public function diminuer($id){
         $product = Inventairenurse::find($id);
-        $product->quantity -= 1;
-        // dd($product->quantity);
+        if($product->quantity > 0) {
+            $product->quantity -= 1;
+        }else{
+            $product->quantity == 0;
+        }
         $product->save();
         return redirect()->back();
 
