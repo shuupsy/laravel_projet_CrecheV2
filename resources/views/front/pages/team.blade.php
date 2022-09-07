@@ -29,7 +29,7 @@
                 <div class="flex contenu justify-center items-center">
                     <div class="boxMessage flex flex-col items-center justify-center rounded gap-2 relative">
                         <div onclick="closeMessage()" class="h-10 w-10 flex justify-center items-center bg-gray-400 text-white rounded-br-lg absolute top-0 left-0">X</div>
-                        <textarea class="p-4 w-5/6 bg-slate-50 rounded-lg border border-grey-300" name="message" cols="30" rows="10" placeholder="Veuillez entrer votre message."></textarea>
+                        <textarea class="p-4 w-5/6 bg-slate-50 rounded-lg border border-grey-300" name="message" cols="30" rows="10" placeholder="Veuillez entrer votre message." required></textarea>
                         <button class="p-2 rounded-lg w-5/6 border border-grey-300 text-gray-400" type="submit">Envoyez</button>
                     </div>
                 </div>

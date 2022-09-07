@@ -111,7 +111,7 @@
             <label class="mt-5">Description</label>
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Activité" name="activity">
-            <textarea class="shadow-lg drop-shadow-md rounded-lg mt-1 mb-5" name="response"></textarea>
+            <textarea class="shadow-lg drop-shadow-md rounded-lg mt-1 mb-5" name="response" required></textarea>
 
             <div class="flex justify-end">
                 <button
@@ -319,7 +319,7 @@
             <label class="mt-5">Description</label>
             <input class="hidden" type="text" name="backaccueil_id" value="{{ $data->id }}">
             <input class="hidden" type="text" value="Accident" name="activity">
-            <textarea class="shadow-lg drop-shadow-md rounded-lg mt-1 mb-5" name="response"></textarea>
+            <textarea class="shadow-lg drop-shadow-md rounded-lg mt-1 mb-5" name="response" required></textarea>
 
             <div class="flex justify-end">
                 <button
