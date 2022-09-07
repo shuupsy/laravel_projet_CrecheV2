@@ -37,13 +37,14 @@ Route::get('/backend/calendrier',[CalendriernurseController::class,"index"])->na
 Route::get('/backend/calendrier/{id}',[CalendriernurseController::class,"affichageDay"]);
 
 //frontend accueil
-Route::get('/frontend/accueil',[CalendrierparentsController::class,"index"])->name("frontAccueil");
+Route::get('/frontend/accueil',[CalendrierparentsController::class,"index"])->name("frontCalendrier");
 
 //frontend team
-Route::get('/frontend/team',[JournalparentsController::class,"index"])->name("frontAccueil");
+Route::get('/frontend/team',[JournalparentsController::class,"index"])->name("frontTeam");
 
 //frontend calendrier
-Route::get('/frontend/calendrier',[CalendrierparentsController::class,"index"])->name("frontCalendrier");
+/* Route::get('/frontend/calendrier',[CalendrierparentsController::class,"index"])->name("frontCalendrier"); */
+
 Route::get('/frontend/calendrier/{id}',[CalendrierparentsController::class,"affichageDay"])->name("frontaffichageDay");
 //frontend inventaire
 Route::get('/frontend/inventaire',[InventaireparentsController::class,"index"])->name("frontInventaire");

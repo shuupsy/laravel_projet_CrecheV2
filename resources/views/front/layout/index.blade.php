@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/assets/css/calendrier.css">
     {{-- Link BoxIcons --}}
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <title>PARENT</title>
+    <title>{{substr(ucfirst(Route::current()->getName()),5)}} | PARENT</title>
 </head>
 
 <body>
