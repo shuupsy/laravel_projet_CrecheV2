@@ -8,9 +8,11 @@
     <div class="flex flex-col justify-between flex-1 mt-6">
         <nav>
             {{-- Titre --}}
-            <div class='flex items-center gap-5'>
-                <i class='bx bxs-baby-carriage text-4xl'></i>
-                <h1 class="text-xl">BABY'ZOU</h1>
+            <div class='flex justify-between items-center'>
+                <a href="/backend/nurseAccueil" class='flex items-center gap-5'>
+                    <i class='bx bxs-baby-carriage text-4xl text-[#84954b] font-black'></i>
+                    <h1 class="text-xl">BABY'ZOU</h1>
+                </a>
                 {{-- A SUPPRIMER --}}
                 <a href="/frontend/accueil">
                     <i class='bx bx-log-out' id="log_out"></i>
