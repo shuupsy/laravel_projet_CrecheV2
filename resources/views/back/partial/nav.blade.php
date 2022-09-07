@@ -14,7 +14,6 @@
                 {{-- A SUPPRIMER --}}
                 <a href="/frontend/accueil">
                     <i class='bx bx-log-out' id="log_out"></i>
-                    <span>GO PARENTS</span>
                 </a>
                 {{-- A SUPPRIMER --}}
             </div>

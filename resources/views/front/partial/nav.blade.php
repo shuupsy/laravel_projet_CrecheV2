@@ -13,7 +13,6 @@
                 {{-- A SUPPRIMER --}}
                 <a href="/backend/nurseAccueil">
                     <i class='bx bx-log-out' id="log_out"></i>
-                    <span>GO NURSE</span>
                 </a>
                 {{-- A SUPPRIMER --}}
             </div>
