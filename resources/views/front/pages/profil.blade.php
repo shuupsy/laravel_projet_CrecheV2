@@ -93,7 +93,12 @@
             <div class="content">
                 <div class="texte">
                     <p class="soustitre">Autorisation photo</p>
-                    <p>{{$enfants->picturePermission}}
+                    <p>
+                        @if ($enfants->picturePermission == true)
+                            oui
+                        @else
+                            non
+                        @endif
                     </p>
                 </div>
                 <div class="w-16 h-16 p-4 flex justify-center items-center bg-[#D8E2DC] rounded-full iconProfil">
@@ -108,7 +113,13 @@
                 </div>
                 <div class="texte">
                     <p class="soustitre">Autorisation de sortie</p>
-                    <p class="text-sm">{{$enfants->exitPermission}}</p>
+                    <p class="text-sm">
+                        @if ($enfants->exitPermission == true)
+                            oui
+                        @else
+                            non
+                        @endif
+                    </p>
                 </div>
             </div>
         </div>

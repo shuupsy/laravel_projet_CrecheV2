@@ -33,7 +33,6 @@
                             <div class="font-bold">{{ $item->activity }}:</div>
                             <div>{{ $item->response }}</div>
                         </div>
-
                     </div>
                 @endif
             @endforeach
