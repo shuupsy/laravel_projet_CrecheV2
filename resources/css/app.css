@@ -131,3 +131,43 @@
     padding: 1rem;
     border-radius: .3rem;
 }
+
+
+@media screen and (max-width: 600px) {
+
+    .btnMessagerieBackOpen{
+        position: fixed;
+        bottom: -2rem;
+        right: -7rem;
+    }
+
+    .boxMessagerieBack{
+        position: fixed;
+        bottom: -0.5rem;
+        right: -7rem;
+        height: 350px;
+        width: 250px;
+        border-radius: 10px;
+    }
+
+    .choixUsersMessagerie{
+        display: none;
+    }
+
+    .teamMessagerie{
+        left: -8.5rem;
+        top: 0rem;
+    }
+
+    .imageTeam{
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 5px solid rgb(248 250 252) ;
+    }
+
+    .imgTeam{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+}
