@@ -331,15 +331,44 @@
     </div>
 
     <!--modal SANTE-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative">
+    <div class="modalWindow hidden flex flex-col relative gap-6">
 
         @include('back.partial.modal-closebtn')
 
-        <h3 class="text-3xl">Informations générales</h3>
+        <h3 class="text-3xl text-center">Informations générales</h3>
 
-        <div>
-            {{ $enfants->allergy }}
+        {{-- Allergies --}}
+        <div class='flex justify-evenly'>
+            <div id='allergy' class='flex flex-col items-center'>
+                <img src="/assets/img/virus.svg" alt="icone virus" width='50px'>
+                <p class='text-sm'>Allergies</p>
+            </div>
+
+            <ul>
+                @foreach ($allergies as $allergy)
+                    <li class='list-disc'>{{ $allergy }}</li>
+                @endforeach
+            </ul>
         </div>
+
+        {{-- Autorisation de sortie --}}
+        <div class='flex justify-evenly'>
+            <div id='phot' class='flex flex-col items-center'>
+                <img src="/assets/img/virus.svg" alt="icone virus" width='50px'>
+                <p class='text-sm'>Autorisation de sortie</p>
+            </div>
+        </div>
+
+        {{-- Autorisation de photos --}}
+        <div class='flex justify-evenly'>
+            <div id='phot' class='flex flex-col items-center'>
+                <img src="/assets/img/virus.svg" alt="icone virus" width='50px'>
+                <p class='text-sm'>Autorisation de photos</p>
+            </div>
+        </div>
+
+
+
     </div>
 
 </div>

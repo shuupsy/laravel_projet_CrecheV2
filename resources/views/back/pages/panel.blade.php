@@ -67,7 +67,7 @@
         <div
             class="panelBtn flex flex-col justify-evenly items-center gap-2 pb-2 pt-4 px-4 shadow-md shadow-slate-400 border border-zinc-800 rounded-lg cursor-pointer">
             <div><img src="/assets/img/medical.svg" alt="svg allergy medical"></div>
-            <p>Santé</p>
+            <p>Infos</p>
         </div>
     </div>
 

@@ -17,7 +17,9 @@ class PanelIndividuel extends Controller
         $data = Backaccueil::find($id);
         $nurses = Frontaccueil::all();
         $enfants = Profilenfant::find($id);
-        return view("back.pages.panel", compact("data","messages","nurses", "enfants"));
+        $allergies = explode(",", $enfants->allergy);
+
+        return view("back.pages.panel", compact("data","messages","nurses", "enfants", "allergies"));
     }
     public function activity(Request $request, $id)
     {
