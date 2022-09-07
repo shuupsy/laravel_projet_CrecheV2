@@ -341,7 +341,7 @@
 
 
         {{-- Allergies --}}
-        <div class='flex justify-evenly'>
+        <div class='flex justify-center items-center gap-10'>
             <div id='allergy' class='flex flex-col items-center'>
                 <img src="/assets/img/virus.svg" alt="icone virus" width='50px'>
                 <p class='text-sm'>Allergies</p>
