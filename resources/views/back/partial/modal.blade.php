@@ -99,7 +99,8 @@
     </div>
 
     <!--modal ACTIVITE-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative" id='modal-activity'>
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative"
+        id='modal-activity'>
 
         @include('back.partial.modal-closebtn')
 
@@ -307,7 +308,8 @@
     </div>
 
     <!--modal BLESSURE-->
-    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative" id='modal-blessure'>
+    <div class="modalWindow hidden flex justify-center flex-col items-center text-center relative"
+        id='modal-blessure'>
 
         @include('back.partial.modal-closebtn')
 
@@ -331,11 +333,12 @@
     </div>
 
     <!--modal SANTE-->
-    <div class="modalWindow hidden flex flex-col relative gap-6">
+    <div class="modalWindow hidden flex flex-col relative gap-6 overflow-auto">
 
         @include('back.partial.modal-closebtn')
 
         <h3 class="text-3xl text-center">Informations générales</h3>
+
 
         {{-- Allergies --}}
         <div class='flex justify-evenly'>
@@ -354,21 +357,40 @@
         {{-- Autorisation de sortie --}}
         <div class='flex justify-evenly'>
             <div id='phot' class='flex flex-col items-center'>
-                <img src="/assets/img/virus.svg" alt="icone virus" width='50px'>
-                <p class='text-sm'>Autorisation de sortie</p>
+                <img src="/assets/img/door.svg" alt="icone porte" width='50px'>
+                <p class='text-sm'>Autorisation de sortie :
+                    @if ($enfants->exitPermission == true)
+                        <span class='font-black'>OUI</span>
+                    @else
+                        <span class='font-black'>NON</span>
+                    @endif
+                </p>
             </div>
         </div>
 
         {{-- Autorisation de photos --}}
         <div class='flex justify-evenly'>
             <div id='phot' class='flex flex-col items-center'>
-                <img src="/assets/img/virus.svg" alt="icone virus" width='50px'>
-                <p class='text-sm'>Autorisation de photos</p>
+                <img src="/assets/img/camera.svg" alt="icone appareil photo" width='50px'>
+                <p class='text-sm'>Autorisation de photos :
+                    @if ($enfants->picturePermission == true)
+                        <span class='font-black'>OUI</span>
+                    @else
+                        <span class='font-black'>NON</span>
+                    @endif
+                </p>
             </div>
         </div>
-
-
-
+        {{-- Autorisation de photos --}}
+        <div class='flex justify-evenly'>
+            <div id='phot' class='flex flex-col items-center text-sm'>
+                <p>Jours de présence :</p>
+                <p>{{ $enfants->dayOfPresence }}</p>
+            </div>
+        </div>
     </div>
+
+
+
 
 </div>

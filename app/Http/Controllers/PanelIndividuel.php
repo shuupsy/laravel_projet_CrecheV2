@@ -16,6 +16,7 @@ class PanelIndividuel extends Controller
         $messages = Messageenfants::all();
         $data = Backaccueil::find($id);
         $nurses = Frontaccueil::all();
+
         $enfants = Profilenfant::find($id);
         $allergies = explode(",", $enfants->allergy);
 
