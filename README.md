@@ -37,7 +37,7 @@ _Date:_ 26/08/2022 to 07/09/2022 (**1.5 week**)
 
 ### About the project
 
-We decided de create a tracking app for babies in nurseries. This can be used by :
+We decided to create a tracking app for babies in nurseries. This can be used by :
 
 - **the nurses** : for an easy and quick management of each baby (arrival time, number of nappies left,...) and automation of some tasks
 - **the parents** : for a quick follow-up of the child with a diary, which is updated at each event of the day
