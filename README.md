@@ -1,64 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## FRANÇAIS (eng below)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+### Context
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+_Membres du groupe :_ Mounia, Sylvaine, Yves
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Pour l'événement du lancement d'un nouveau programme à Molengeek (SIDEGEEK), nous avions pu montrer ce qu'on avait déjà appris, en créant un projet de notre choix.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+_Date:_ 26/08/2022 au 07/09/2022 (1.5 semaine)
 
-## Learning Laravel
+### A propos du projet
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Nous avons décidé de créer une application de suivi des bébés en crèches. Celle-ci est utilisable par :
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **les puériculteurs.trices** : pour une gestion facile et rapide de chaque bébé (heure d'arrivée, nombre de couches restantes, etc...), et l'automatisation de certaines tâches
+- **les parents** : pour un suivi rapide de l'enfant avec un journal mis à jour à chaque événement de la journée
 
-## Laravel Sponsors
+### Outils utilisés
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Laravel (PHP)
+- Javascript
+- HTML / CSS
+- Tailwind
+- Photoshop
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## ENGLISH
 
-## Contributing
+### Context
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+_Group members :_ Mounia, Sylvaine, Yves
 
-## Code of Conduct
+For the launch event of a new program at Molengeek (SIDEGEEK), we could show what we've already learned, by creating a project of our choice.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+_Date:_ 26/08/2022 to 07/09/2022 (**1.5 week**)
 
-## Security Vulnerabilities
+### About the project
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+We decided de create a tracking app for babies in nurseries. This can be used by :
 
-## License
+- **the nurses** : for an easy and quick management of each baby (arrival time, number of nappies left,...) and automation of some tasks
+- **the parents** : for a quick follow-up of the child with a diary, which is updated at each event of the day
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+### Tools we used
+
+- Laravel (PHP)
+- Javascript
+- HTML / CSS
+- Tailwind
+- Photoshop
