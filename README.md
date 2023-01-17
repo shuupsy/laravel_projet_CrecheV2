@@ -1,7 +1,7 @@
 ## FRANÇAIS (eng below)
 
 
-### Context
+### Contexte
 
 _Membres du groupe :_ Mounia, Sylvaine, Yves
 
